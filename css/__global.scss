@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    color: #fff;
+}
+
+body {
+    background-color: $color--dark;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-weight: 900;
+}

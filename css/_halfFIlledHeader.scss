@@ -1,0 +1,22 @@
+.halfFilledHeader {
+    text-transform: uppercase;
+    font-size: 54px;
+    font-weight: 900;
+    margin: 0 auto;
+    transform: translateY(50%);
+    position: relative;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 5;
+    &::after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 0.6em;
+        overflow: hidden;
+        color: $color--dark;
+        -webkit-text-stroke: 1px #fff;
+        z-index: 1;
+    }
+}

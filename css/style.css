@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  color: #fff;
+}
+
+body {
+  background-color: #141414;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: 900;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #141414;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 32px;
+}
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 27px;
+  height: 20px;
+}
+.navbar__hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.welcome {
+  max-height: 100vh;
+  display: grid;
+  grid-template: 480px 1fr/1fr 1fr;
+  position: relative;
+}
+.welcome__headerCont {
+  font-size: 44px;
+  color: #fff;
+  margin: 0;
+  margin-left: 20px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20%;
+}
+.welcome__headerCont::after {
+  content: "+";
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  font-size: 40px;
+  font-weight: 400;
+  transform: rotate(45deg) translateY(100%);
+}
+.welcome__header {
+  position: relative;
+}
+.welcome__header::before {
+  content: "";
+  position: absolute;
+  background-color: #5E1E92;
+  width: 115%;
+  left: -10%;
+  height: 110%;
+  top: -50%;
+  z-index: -1;
+}
+.welcome__subHeader {
+  display: block;
+}
+@media (min-width: 768px) {
+  .welcome__subHeader {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+
+.welcome__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90px;
+  border: 1px solid red;
+}
+.welcome__cell--big {
+  padding: 30px 20px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  grid-column-end: span 2;
+}
+
+.welcome__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #5E1E92;
+  text-transform: uppercase;
+  width: 138px;
+  height: 44px;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.welcome__text {
+  font-size: 14px;
+  font-weight: 900;
+  margin: 4px 0;
+}
+.welcome__text--bordered {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.welcome__playButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  background-color: #fff;
+  position: relative;
+  color: #5E1E92;
+  border-radius: 50%;
+  font-size: 30px;
+  padding-left: 6px;
+}
+.welcome__playButton:hover::after {
+  transform: scale(1.2);
+}
+.welcome__playButton::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  transition: all 0.33s cubic-bezier(0.48, -0.26, 0.69, 2.5);
+}
+
+.halfFilledHeader {
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: 900;
+  margin: 0 auto;
+  transform: translateY(50%);
+  position: relative;
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  z-index: 5;
+}
+.halfFilledHeader::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0.6em;
+  overflow: hidden;
+  color: #141414;
+  -webkit-text-stroke: 1px #fff;
+  z-index: 1;
+}
+
+.realizations__header {
+  display: flex;
+  justify-content: center;
+}
+
+.realizations__grid {
+  display: grid;
+  grid-gap: 30px;
+}
+
+.realizations__cell {
+  width: 95%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.realizations__cell:nth-child(2n) {
+  margin-left: auto;
+}
+.realizations__cell:nth-child(2n) .realizations__photoNumber {
+  right: auto;
+  left: 0;
+}
+.realizations__cell:nth-child(2n) .realizations__photoTite {
+  margin-left: 0;
+}
+
+.realizations__imgCont {
+  position: relative;
+  width: 100%;
+  height: 235px;
+  margin-bottom: 16px;
+}
+
+.realizations__photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.realizations__photoNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  color: #141414;
+  width: 25px;
+  height: 25px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.realizations__photoTite {
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
