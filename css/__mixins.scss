@@ -3,3 +3,7 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin relSize($property, $pixelsSize) {
+    #{$property}: ($pixelsSize/19.2)+vw;
+}

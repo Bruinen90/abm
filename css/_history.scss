@@ -1,0 +1,95 @@
+.history {
+    margin: 30px 0;
+    @media (min-width: $laptop) {
+        max-width: 80%;
+        margin: 200px auto;
+    }
+}
+
+.history__header {
+    font-size: 46px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+        @include relSize('font-size', 137);
+    }
+}
+
+.history__content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-gap: 30px;
+    margin: 45px 16px;
+    
+    @media (min-width: $tablet) {
+        margin: 120px 0;
+        margin-left: 60px;
+    }
+}
+
+.history__timeline {
+    margin-top: 90px;
+    list-style: none;
+    counter-reset: custom-counter;
+
+    @media (min-width: $tablet) {
+        margin: 0;
+        @include relSize('width', 500);
+    }
+    li {
+        margin-bottom: 18px;
+        counter-increment: custom-counter;
+        position: relative;
+        padding-left: 30px;
+        font-size: 10px;
+
+        @media (min-width: $tablet) {
+            font-size: 16px;
+            @include relSize('padding-left', 100);
+            @include relSize('margin-bottom', 90);
+        }
+
+        .timeline__year {
+            font-size: 12px;
+
+            @media (min-width: $tablet) {
+                font-size: 24px;
+            }
+        }
+
+        .timeline__title {
+            color: $color--vivid--light;
+
+            @media (min-width: $tablet) {
+                font-size: 24px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: counter(custom-counter)' ';
+            color: transparent;
+            font-weight: 900;
+            font-size: 28px;
+            -webkit-text-stroke: 1px #fff;
+            position: absolute;
+            left: 0;
+            top: -.9em;
+
+            @media (min-width: $tablet) {
+                @include relSize('font-size', 100);
+            }
+        }
+    }
+}
+
+.history__image {
+    width: 132px;
+    
+    @media (min-width: $tablet) {
+        @include relSize('width', 490);
+    }
+}

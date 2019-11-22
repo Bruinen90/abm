@@ -1,0 +1,78 @@
+.mission {
+
+}
+
+.mission__text {
+    padding-left: 40px;
+    padding-right: 22px;
+    margin: 20px 0;
+
+    @media (min-width: $tablet) {
+        width: 28vw;
+        min-width: 500px;
+        margin-left: 5vw;
+        margin-bottom: 88px;
+        margin-top: 88px;
+    }
+
+    @media (min-width: $laptop) {
+        margin-left: 18.5vw;
+    }
+}
+
+.mission__header {
+    font-size: 67px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+
+    @media (min-width: $tablet) {
+        font-size: 16.5vw;
+        white-space: nowrap;
+    }
+}
+
+.mission__title {
+    text-transform: uppercase;
+
+    .mission__subTitle {
+        font-size: 13px;
+        margin-left: 3px;
+        @media (min-width: $tablet) {
+            font-size: 2.5vw;
+        }
+    }
+
+    .mission__mainTitle {
+        color: $color--vivid--light;
+        font-size: 40px;
+        line-height: 1;
+        @media (min-width: $tablet) {
+            font-size: 7.9vw;
+        }
+    }
+}
+
+.mission__description {
+    font-size: 10px;
+    @media (min-width: $tablet) {
+        font-size: 16px;
+    }
+}
+
+.mission__imgCont {
+    width: 100%;
+}
+
+.mission__img {
+    object-fit: cover;
+    height: 244px;
+    width: 100%;
+    @media (min-width: $tablet) {
+        height: 50vh;
+    }
+
+    @media (min-width: $laptop) {
+        height: 100vh;
+    }
+}

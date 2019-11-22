@@ -1,24 +1,51 @@
 .navbar {
-    width: 100%;
-    height: 50px;
-    background-color: $color--dark;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 32px;
+  width: 100%;
+  height: 50px;
+  background-color: $color--dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 32px;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
 
-    &__hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 27px;
-        height: 20px;
-    
-        div {
-            width: 100%;
-            height: 3px;
-            background-color: #fff;
-        }
+  @media (min-width: $laptop) {
+    height: 100px;
+    background: transparent;
+  }
+
+  &__hamburger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    &Opened,
+    &Closed {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      transition: all .25s linear;
     }
+
+    &Opened {
+      opacity: 0;
+    }
+
+    &Closed {
+      opacity: 1;
+    }
+
+    &--active {
+      .navbar__hamburgerOpened {
+        opacity: 1;
+      }
+      .navbar__hamburgerClosed {
+        opacity: 0;
+      }
+    }
+  }
 }

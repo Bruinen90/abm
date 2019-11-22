@@ -15,14 +15,47 @@
 		<title>ABM</title>
 	</head>
 	<body>
+		<!-- Navbar -->
 		<nav class="navbar">
 			<a href="/">
 				<img src="img/logo.svg" class="navbar__logo" />
 			</a>
+			<div class="menu">
+				<ul class="menu__list">
+					<li class="menu__item">
+						<a href="" class="menu__link">O firmie</a>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Team ABM</a>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Realizacje</a>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Aktualności</a>
+					</li>
+					<li class="menu__item">
+						<a href="" class="menu__link">Kontakt</a>
+					</li>
+				</ul>
+				<div class="menu__specials">
+					<a href="./contact.html" class="menu__specialLink"
+						>Kontakt</a
+					>
+					<a
+						href="./contact.html"
+						class="menu__specialLink menu__specialLink--hightlighted"
+						>E-sklep</a
+					>
+				</div>
+			</div>
+			<div class="menu__cover"></div>
 			<div class="navbar__hamburger">
-				<div></div>
-				<div></div>
-				<div></div>
+				<img src="./img/icons/x.svg" class="navbar__hamburgerOpened" />
+				<img
+					src="./img/icons/hamburger.svg"
+					class="navbar__hamburgerClosed"
+				/>
 			</div>
 		</nav>
 		<main>
@@ -34,7 +67,13 @@
 				</h1>
 				<div class="welcome__cell welcome__cell--big">
 					<div class="welcome__playCont">
-						<div class="welcome__playButton">▶</div>
+						<div class="welcome__playButton">
+							<img
+								src="./img/icons/triangle_vivid.svg"
+								alt=""
+								class="welcome__playIcon"
+							/>
+						</div>
 					</div>
 					<a href="/e-sklep.html" class="welcome__button">e-sklep</a>
 				</div>
@@ -102,6 +141,16 @@
 							Obuwniczy Gdzieś
 						</div>
 					</div>
+					<div class="realizations__cell realizations__cell--text">
+						<img
+							src="./img/icons/x_vivid.svg"
+							alt=""
+							class="realizations__xIcon"
+						/>
+						<div class="realizations__trustText">
+							zaufało nam ponad 150 sklepów branżowych
+						</div>
+					</div>
 					<div class="realizations__cell">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
@@ -147,8 +196,142 @@
 							Sklep spożywczy Będzin
 						</div>
 					</div>
+					<div class="realizations__cell realizations__cell--list">
+						<img
+							src="./img//arrow_up.svg"
+							alt=""
+							class="realizations__arrowIcon"
+						/>
+						<ol class="realizations__list">
+							<li>Empik Rynek Kraków</li>
+							<li>Żabka Kraków</li>
+							<li>Obuwniczy</li>
+							<li>Biuro</li>
+							<li>4F Miechów</li>
+							<li>Sklep spożyczy Będzin</li>
+						</ol>
+					</div>
 				</div>
 			</section>
+
+			<!-- NASZA MISJA -->
+			<section class="mission">
+				<h2 class="mission__header">Nasza misja</h2>
+				<div class="mission__text">
+					<h3 class="mission__title">
+						<div class="mission__subTitle">Wyposażamy</div>
+						<div class="mission__mainTitle">Sklepy</div>
+					</h3>
+					<p class="mission__description">
+						Właścicielom sklepów oferujemy kompletne wyposażenie,
+						które łączy w sobie estetyczne i funkcjonalne
+						rozwiązania pozwalające na dowolne zarządzanie
+						przestrzenią. Projektujemy, tworzymy wizualizację
+						wnętrz, montujemy i kreujemy indywidualny wizerunek
+						Państwa sklepu.
+					</p>
+				</div>
+				<picture class="mission__imgCont">
+					<img
+						src="./img/photos/sklepy.png"
+						alt=""
+						class="mission__img"
+					/>
+				</picture>
+				<div class="mission__text">
+					<h3 class="mission__title">
+						<div class="mission__subTitle">I...</div>
+						<div class="mission__mainTitle">Biura</div>
+					</h3>
+
+					<p class="mission__description">
+						Twoja przestrzeń biurowa jest tym co identyfikuje twoją
+						firmę. Dobrze zagospodarowana przestrzeń i ergonomiczne
+						rozwiązania, stanowią komfortowe miejsce pracy oraz
+						pozytywną w odbiorze wizytówkę twojej działalności.
+					</p>
+				</div>
+				<picture class="mission__imgCont">
+					<img
+						src="./img/photos/biura.png"
+						alt=""
+						class="mission__img"
+					/>
+				</picture>
+			</section>
+
+			<!-- Kawałek historii -->
+			<section class="history">
+				<h2 class="history__header">
+					Kawałek historii
+				</h2>
+				<div class="history__content">
+					<ol class="history__timeline">
+						<li>
+							<h4 class="timeline__header">
+								<div class="timeline__year">1991</div>
+								<div class="timeline__title">
+									ROZPOCZĘCIE DZIAŁALNOŚCI
+								</div>
+							</h4>
+							<p class="timeline__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</p>
+						</li>
+						<li>
+							<h4 class="timeline__header">
+								<div class="timeline__year">1998</div>
+								<div class="timeline__title">
+									ABM SPÓŁKĄ AKCYJNĄ
+								</div>
+							</h4>
+							<p class="timeline__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</p>
+						</li>
+						<li>
+							<h4 class="timeline__header">
+								<div class="timeline__year">2017</div>
+								<div class="timeline__title">
+									DOBRY POCZĄTEK
+								</div>
+							</h4>
+							<p class="timeline__text">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</p>
+						</li>
+					</ol>
+					<img
+						src="./img/history.svg"
+						alt=""
+						class="history__image"
+					/>
+				</div>
+            </section>
+            <!-- 78 659 stworzonych projetków -->
+            <section class="productsCount">
+                <h2 class="productsCount__number">78 659</h2>
+                <h3 class="productsCount__text">stworzonych produktów</h3>
+            </section>
 		</main>
+
+		<!-- Scripts -->
+        <script src="./js/menu.js"></script>
+		<script src="./js/productsCount.js"></script>
 	</body>
 </html>
