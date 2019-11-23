@@ -13,7 +13,7 @@ const getElScroll = (el, startOnTop) => {
 	const windowHeight = window.innerHeight;
 	const elRec = el.getBoundingClientRect();
 	const elPos = elRec.top + elRec.height * (startOnTop ? 0 : 1 / 2);
-	if (elPos < windowHeight && elRec.bottom > elRec.height / 6) {
+	if (elPos < windowHeight + elRec.height && elRec.bottom > elRec.height / 6) {
 		return (200 * (elPos - windowHeight / 2)) / windowHeight;
 	}
 };
@@ -22,8 +22,8 @@ const animateCounter = () => {
 	number.style.transform = `translateX(${getElScroll(number)}%)`;
 	text.style.transform = `translateX(${-1 * getElScroll(number)}%)`;
 
-	historyImg.style.transform = `translateY(${-0.5 *
-		getElScroll(historyImg)}%)`;
+	historyImg.style.transform = `translateY(${-0.15 *
+		getElScroll(historyImg, true)}vh)`;
 
 	if (window.innerWidth > 959) {
 		eventsCount.style.transform = `translate(${-0.5 *

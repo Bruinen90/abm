@@ -1,9 +1,7 @@
 .yearsOnMarket {
     position: relative;
-    margin-bottom: 200vh;
 
     @media (min-width: $tablet) {
-        overflow: hidden;
         padding: 300px 0;
     }
 }
