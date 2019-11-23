@@ -11,6 +11,8 @@
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     text-align: center;
+    position: relative;
+    z-index: 10;
 
     @media (min-width: $tablet) {
         @include relSize('font-size', 137);
@@ -87,7 +89,9 @@
 }
 
 .history__image {
+    align-self: center;
     width: 132px;
+    transition: transform .25s linear;
     
     @media (min-width: $tablet) {
         @include relSize('width', 490);
