@@ -377,19 +377,60 @@
 
 			<!-- Galeria -->
 			<section class="gallery">
+				<h2
+					class="halfFilledHeader gallery__header"
+					data-text="Galeria"
+				>
+					Galeria
+				</h2>
 				<div class="gallery__sliderCont">
 					<div class="slider">
 						<img
-							src=""
+							src="./img/icons/arrow.svg"
 							alt="Poprzednie zdjęcie"
-							class="slider__arrow"
+                            class="slider__arrow slider__arrow--prev"
 						/>
 						<img
-							src=""
+							src="./img/icons/arrow.svg"
 							alt="Następne zdjęcie"
-							class="slider__arrow"
+							class="slider__arrow slider__arrow--next"
 						/>
-						<div class="slider__imagesCont"></div>
+						<div class="slider__imagesCont">
+							<img
+								src="./img/photos/gal_01.jpg"
+								alt=""
+								class="slider__img"
+							/>
+
+							<img
+								src="./img/photos/gal_02.jpg"
+								alt=""
+								class="slider__img"
+							/>
+
+							<img
+								src="./img/photos/gal_03.jpg"
+								alt=""
+								class="slider__img"
+							/>
+							<img
+								src="./img/photos/gal_04.jpg"
+								alt=""
+								class="slider__img"
+							/>
+
+							<img
+								src="./img/photos/gal_05.jpg"
+								alt=""
+								class="slider__img"
+							/>
+
+							<img
+								src="./img/photos/gal_06.jpg"
+								alt=""
+								class="slider__img"
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -537,10 +578,14 @@
 					<a href="" class="footer__link">Kontakt</a>
 				</div>
 				<div class="footer__buttonsCont">
-                    <div class="footer__othersHead">
-                        <img src="./img/icons/arrow_down.svg" alt="" class="footer__arrowDown">
-                        <span class="footer__othersTitle">Inne</span>
-                    </div>
+					<div class="footer__othersHead">
+						<img
+							src="./img/icons/arrow_down.svg"
+							alt=""
+							class="footer__arrowDown"
+						/>
+						<span class="footer__othersTitle">Inne</span>
+					</div>
 					<a href="" class="footer__button footer__button--vivid"
 						>E-sklep</a
 					>
@@ -566,7 +611,9 @@
 							class="footer__socialIcon"
 					/></a>
 				</div>
-				<a href="" class="footer__crLink footer__crLink--3">JestemTU - imTU</a>
+				<a href="" class="footer__crLink footer__crLink--3"
+					>JestemTU - imTU</a
+				>
 				<a href="" class="footer__crLink footer__crLink--2"
 					>© Copyright by <strong>ABM Spółka Akcyjna.</strong></a
 				>
@@ -578,6 +625,7 @@
 
 		<!-- Scripts -->
 		<script src="./js/menu.js"></script>
-		<script src="./js/productsCount.js"></script>
+        <script src="./js/productsCount.js"></script>
+		<script src="./js/slider.js"></script>
 	</body>
 </html>

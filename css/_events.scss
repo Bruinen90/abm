@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    margin: 20vh 0;
+    margin: 10vh 0;
 
     @media (min-width: $tablet) {
         grid-template-columns: 1fr 1.75fr;
