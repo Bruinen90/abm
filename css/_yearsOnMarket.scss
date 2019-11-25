@@ -1,5 +1,6 @@
 .yearsOnMarket {
     position: relative;
+    overflow: hidden;
 
     @media (min-width: $tablet) {
         padding: 300px 0;
@@ -73,7 +74,7 @@
         height: 1600px;
 
         &::before, &::after {
-            width: 5000px;
+            width: 150vw;
             left: 0;
             border-bottom: 1px dotted #fff;
             transform: rotate(30deg);

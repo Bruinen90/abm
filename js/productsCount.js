@@ -29,7 +29,9 @@ const animateCounter = () => {
 		eventsCount.style.transform = `translate(${-0.5 *
 			Math.abs(getElScroll(eventsCount))}%, ${-0.5 *
 			Math.abs(getElScroll(eventsCount))}%)`;
-	}
+    }
+    
+    // Years on market trolley problem
 	if (window.innerWidth < 960) {
 		wagon.style.transform = `translate(${-0.346 *
 			getElScroll(wagon, true)}vh, ${-0.2 * getElScroll(wagon, true)}vh)`;
