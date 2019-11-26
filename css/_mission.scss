@@ -1,5 +1,11 @@
 .mission {
+    background-image: url('../img/dots.svg');
+    background-repeat: repeat-y;
+    background-position-x: 80%;
 
+    @media (min-width: $tablet) {
+       background-image: none;
+    }
 }
 
 .mission__text {

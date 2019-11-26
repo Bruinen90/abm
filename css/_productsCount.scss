@@ -1,5 +1,20 @@
 .productsCount {
-    margin-bottom: 120px;
+    padding-bottom: 61px;
+    background-image: url('../img/dots.svg');
+    background-repeat: repeat-y;
+    background-position-x: 80%;
+
+    @media (min-width: $tablet) {
+       background-image: none;
+    }
+}
+
+.productsCount__wrapper {
+    padding: 15px 0;
+    background-color: $color--dark;
+    position: relative;
+    z-index: 5;
+    display: block;
 }
 
 .productsCount__number, .productsCount__text {

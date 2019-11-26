@@ -1,0 +1,105 @@
+.bigLetters {
+    display: flex;
+    margin-bottom: 80px;
+
+    @media (min-width: $tablet) {
+       margin-bottom: 145px;
+    }
+}
+
+.bigLetters__arrowCont {
+    position: relative;
+    padding: 0 38px;
+
+    @media (min-width: $tablet) {
+       @include relSize('width', 620);
+       display: flex;
+       justify-content: center;
+    }
+
+    .bigLetters__arrow {
+        height: 250px;
+
+        @media (min-width: $tablet) {
+            height: 400px;
+        }
+
+        @media (min-width: $laptop) {
+            height: 90vh;
+           
+        }
+    }
+
+    .bigLetters__arrowText {
+        text-transform: uppercase;
+        transform: rotate(-90deg);
+        transform-origin: left;
+        position: absolute;
+        top: 60%;
+        left: 55px;
+        font-size: 9px;
+
+        @media (min-width: $tablet) {
+           @include relSize('font-size', 44);
+           left: calc(50% + 1em);
+           top: 65%;
+        }
+    }
+}
+
+.bigLetters__letterCont {
+    position: relative;
+    width: 170px;
+
+    @media (min-width: $tablet) {
+       @include relSize('width', 684+207);
+    }
+}
+
+.bigLetters__letter {
+    position: absolute;
+    bottom: 0;
+    @include strokeText;
+    font-size: 200px;
+    line-height: 0.7em;
+
+    @media (min-width: $tablet) {
+        @include relSize('font-size', 1000);
+    }
+
+    &--a {
+        opacity: 1;
+    }
+
+    &--z {
+        opacity: 0;
+    }
+}
+
+.bigLetters__timeCont {
+    position: relative;
+    align-self: center;
+    margin-top: -25%;
+
+    @media (min-width: $tablet) {
+        margin-top: -38%;
+    }
+}
+
+.bigLetters__time {
+    @include strokeText;
+    font-size: 30px;
+    position: absolute;
+
+    @media (min-width: $tablet) {
+       @include relSize('font-size', 135);
+    }
+
+    &--from {
+        opacity: 1;
+    }
+
+    &--to {
+        opacity: 0;
+    }
+}
