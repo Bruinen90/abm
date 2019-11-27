@@ -4,7 +4,23 @@
     background-position-x: 80%;
 
     @media (min-width: $tablet) {
-       background-image: none;
+       background-position-x: 75%;
+       padding-bottom: 15vh;
+    }
+}
+
+
+.mission__header {
+    font-size: 67px;
+    font-weight: 900;
+    color: $color--dark;
+    -webkit-text-stroke: 1px #fff;
+
+    @media (min-width: $tablet) {
+        font-size: 16.5vw;
+        white-space: nowrap;
+        text-align: right;
+        @include relSize('margin-right', -75);
     }
 }
 
@@ -12,6 +28,7 @@
     padding-left: 40px;
     padding-right: 22px;
     margin: 20px 0;
+    position: relative;
 
     @media (min-width: $tablet) {
         width: 28vw;
@@ -23,18 +40,8 @@
 
     @media (min-width: $laptop) {
         margin-left: 18.5vw;
-    }
-}
-
-.mission__header {
-    font-size: 67px;
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-
-    @media (min-width: $tablet) {
-        font-size: 16.5vw;
-        white-space: nowrap;
+        width: auto;
+        max-width: 33vw;
     }
 }
 
@@ -63,6 +70,22 @@
     font-size: 10px;
     @media (min-width: $tablet) {
         font-size: 16px;
+        max-width: 500px;
+        padding-right: 22px;
+    }
+}
+
+.mission__arrowCont {
+    display: none;
+
+    @media (min-width: $laptop) {
+       display: block;
+
+       .arrow { 
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
     }
 }
 

@@ -531,7 +531,23 @@ h1 {
 }
 @media (min-width: 768px) {
   .mission {
-    background-image: none;
+    background-position-x: 75%;
+    padding-bottom: 15vh;
+  }
+}
+
+.mission__header {
+  font-size: 67px;
+  font-weight: 900;
+  color: #141414;
+  -webkit-text-stroke: 1px #fff;
+}
+@media (min-width: 768px) {
+  .mission__header {
+    font-size: 16.5vw;
+    white-space: nowrap;
+    text-align: right;
+    margin-right: -3.90625vw;
   }
 }
 
@@ -539,6 +555,7 @@ h1 {
   padding-left: 40px;
   padding-right: 22px;
   margin: 20px 0;
+  position: relative;
 }
 @media (min-width: 768px) {
   .mission__text {
@@ -552,19 +569,8 @@ h1 {
 @media (min-width: 960px) {
   .mission__text {
     margin-left: 18.5vw;
-  }
-}
-
-.mission__header {
-  font-size: 67px;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
-@media (min-width: 768px) {
-  .mission__header {
-    font-size: 16.5vw;
-    white-space: nowrap;
+    width: auto;
+    max-width: 33vw;
   }
 }
 
@@ -597,6 +603,22 @@ h1 {
 @media (min-width: 768px) {
   .mission__description {
     font-size: 16px;
+    max-width: 500px;
+    padding-right: 22px;
+  }
+}
+
+.mission__arrowCont {
+  display: none;
+}
+@media (min-width: 960px) {
+  .mission__arrowCont {
+    display: block;
+  }
+  .mission__arrowCont .arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -625,22 +647,43 @@ h1 {
   background-image: url("../img/dots.svg");
   background-repeat: repeat-y;
   background-position-x: 80%;
-}
-@media (min-width: 768px) {
-  .history {
-    background-image: none;
-  }
+  position: relative;
 }
 @media (min-width: 960px) {
   .history {
     max-width: 80%;
-    margin: 200px auto;
+    padding: 200px auto;
+    margin: 0 auto;
+    background-position-x: 81.25%;
+  }
+}
+
+.history__arrowCont {
+  display: none;
+}
+@media (min-width: 960px) {
+  .history__arrowCont {
+    display: block;
+  }
+  .history__arrowCont .arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 65%;
+    margin: 0 auto;
+  }
+  .history__arrowCont .arrow::before {
+    height: 10%;
+  }
+  .history__arrowCont .arrow::after {
+    top: 11%;
   }
 }
 
 .history__header {
   font-size: 46px;
-  color: transparent;
+  color: #141414;
   -webkit-text-stroke: 1px #fff;
   text-align: center;
   position: relative;
@@ -649,6 +692,7 @@ h1 {
 @media (min-width: 768px) {
   .history__header {
     font-size: 7.1354166667vw;
+    text-align: left;
   }
 }
 
@@ -733,6 +777,7 @@ h1 {
 @media (min-width: 768px) {
   .history__image {
     width: 25.5208333333vw;
+    margin-left: 3.6458333333vw;
   }
 }
 
@@ -744,7 +789,7 @@ h1 {
 }
 @media (min-width: 768px) {
   .productsCount {
-    background-image: none;
+    background-position-x: 75vw;
   }
 }
 
@@ -799,26 +844,34 @@ h1 {
   top: 0;
   left: 115px;
   width: 1px;
-  height: 215px;
+  height: 56vw;
   background-image: url("../img/dots.svg");
   transform-origin: bottom;
   transform: translateY(calc(-100% - 30px)) rotate(60deg);
 }
-.events::after {
-  content: "";
+.events .arrow {
   position: absolute;
-  left: 115px;
+  left: 107.5px;
   top: -30px;
-  width: 1px;
-  height: calc(100% - 313px);
-  background-image: url("../img/dots.svg");
+  height: 90%;
 }
 @media (min-width: 768px) {
   .events {
     grid-template-columns: 1fr 1.75fr;
+    padding-top: 25vw;
+    margin-top: 0;
   }
-  .events::before, .events::after {
-    display: none;
+  .events::before, .events .arrow {
+    top: 25vw;
+    left: 50%;
+  }
+  .events::before {
+    transform: translateY(calc(-100%)) rotate(45deg);
+    height: 36vw;
+  }
+  .events .arrow {
+    left: calc(50% - 7.5px);
+    height: 50%;
   }
 }
 @media (min-width: 960px) {
@@ -1824,6 +1877,54 @@ h1 {
 }
 .bigLetters__time--to {
   opacity: 0;
+}
+
+.arrow {
+  width: 16px;
+  height: 100%;
+  position: relative;
+}
+.arrow::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  height: 20%;
+  width: 1px;
+  background-image: url("../img/dots.svg");
+  background-repeat: repeat-y;
+}
+.arrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  bottom: 0;
+  width: 1px;
+  background: #fff;
+}
+@media (min-width: 960px) {
+  .arrow {
+    width: 21px;
+  }
+}
+
+.arrow__pointer {
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  width: 9px;
+  height: 9px;
+}
+@media (min-width: 960px) {
+  .arrow__pointer {
+    left: 3px;
+    width: 15px;
+    height: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,28 +12,37 @@
         top: 0;
         left: 115px;
         width: 1px;
-        height: 215px;
+        height: 56vw;
         background-image: url('../img/dots.svg');
         transform-origin: bottom;
         transform: translateY(calc(-100% - 30px)) rotate(60deg);
     }
 
-    &::after {
-        content: '';
+    .arrow {
         position: absolute;
-        left: 115px;
-        top: -30px;
-        width: 1px;
-        height: calc(100% - 313px);
-        background-image: url('../img/dots.svg');
-
+            left: 107.5px;
+            top: -30px;
+            height: 90%;
     }
 
     @media (min-width: $tablet) {
         grid-template-columns: 1fr 1.75fr;
+        padding-top: 25vw; 
+        margin-top: 0;
 
-        &::before, &::after {
-            display: none;
+        &::before, .arrow {
+            top: 25vw;
+            left: 50%;
+        }
+
+        &::before {
+            transform: translateY(calc(-100%)) rotate(45deg);
+            height: 36vw;
+        }
+
+        .arrow {
+            left: calc(50% - 7.5px);
+            height: 50%;
         }
     }
 

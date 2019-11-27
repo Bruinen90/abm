@@ -3,20 +3,47 @@
     background-image: url('../img/dots.svg');
     background-repeat: repeat-y;
     background-position-x: 80%;
+    position: relative;
 
     @media (min-width: $tablet) {
-        background-image: none;
      }
 
     @media (min-width: $laptop) {
         max-width: 80%;
-        margin: 200px auto;
+        padding: 200px auto;
+        margin: 0 auto;
+        background-position-x: 81.25%;
+    }
+}
+
+.history__arrowCont {
+    display: none;
+
+    @media (min-width: $laptop) {
+        display: block;
+
+        .arrow {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 65%;
+            margin: 0 auto;
+
+            &::before {
+                height: 10%;
+            }
+
+            &::after {
+                top: 11%;
+            }
+        }
     }
 }
 
 .history__header {
     font-size: 46px;
-    color: transparent;
+    color: $color--dark;
     -webkit-text-stroke: 1px #fff;
     text-align: center;
     position: relative;
@@ -24,6 +51,7 @@
 
     @media (min-width: $tablet) {
         @include relSize('font-size', 137);
+        text-align: left;
     }
 }
 
@@ -103,5 +131,6 @@
     
     @media (min-width: $tablet) {
         @include relSize('width', 490);
+        @include relSize('margin-left', 70);
     }
 }

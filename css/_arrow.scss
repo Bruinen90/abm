@@ -1,0 +1,49 @@
+.arrow {
+    width: 16px;
+    height: 100%;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        height: 20%;
+        width: 1px;
+        background-image: url('../img/dots.svg');
+        background-repeat:  repeat-y;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 21%;
+        bottom: 0;
+        width: 1px;
+        background: #fff;
+    }
+
+    
+    @media (min-width: $laptop) {
+        width: 21px;       
+    }
+
+}
+
+.arrow__pointer {
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    width: 9px;
+    height: 9px;
+
+    @media (min-width: $laptop) {
+        left: 3px;
+        width: 15px;
+        height: 15px;
+    }
+}
