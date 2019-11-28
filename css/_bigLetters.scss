@@ -17,8 +17,14 @@
        justify-content: center;
     }
 
-    .bigLetters__arrow {
+    .bigLetters__arrowCont {
         height: 250px;
+        position: relative;
+
+        .arrow {
+            position: absolute;
+            left: 0;
+        } 
 
         @media (min-width: $tablet) {
             height: 400px;
@@ -26,7 +32,9 @@
 
         @media (min-width: $laptop) {
             height: 90vh;
-           
+           .arrow {
+               left: 50%;
+           }
         }
     }
 
@@ -36,12 +44,12 @@
         transform-origin: left;
         position: absolute;
         top: 60%;
-        left: 55px;
+        left: 60px;
         font-size: 9px;
 
         @media (min-width: $tablet) {
            @include relSize('font-size', 44);
-           left: calc(50% + 1em);
+           left: calc(50% + 1.25em);
            top: 65%;
         }
     }

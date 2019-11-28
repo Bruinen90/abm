@@ -46,12 +46,23 @@
 
 .contact__arrow {
     position: absolute;
-    left: 25px;
-    margin-top: -15px;
+    right: 0;
+    width: 100%;
     z-index: 5;
 
+    .arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        height: 90vw;
+        transform: rotate(90deg);
+        transform-origin: top;
+    }
+
     @media (min-width: $laptop) {
-       width: 55vw;
+       .arrow {
+            height: 50vw;
+       }
     }
 }
 

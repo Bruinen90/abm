@@ -1,7 +1,6 @@
 const arrowPrev = document.querySelector('.slider__arrow--prev');
 const arrowNext = document.querySelector('.slider__arrow--next');
 const photosCont = document.querySelector('.slider__imagesCont');
-
 const photosCount = photosCont.querySelectorAll('img').length;
 
 let currentPhoto = 0;

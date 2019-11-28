@@ -861,17 +861,17 @@ h1 {
     padding-top: 25vw;
     margin-top: 0;
   }
-  .events::before, .events .arrow {
-    top: 25vw;
-    left: 50%;
-  }
   .events::before {
     transform: translateY(calc(-100%)) rotate(45deg);
-    height: 36vw;
+    height: 35.35vw;
+    left: calc(50% + 9px);
+    top: calc(25vw - 3px);
   }
   .events .arrow {
     left: calc(50% - 7.5px);
     height: 50%;
+    top: 25vw;
+    left: 50%;
   }
 }
 @media (min-width: 960px) {
@@ -1161,7 +1161,8 @@ h1 {
   position: absolute;
   width: 500px;
   left: -50px;
-  border-bottom: 1px dotted #fff;
+  height: 1px;
+  background-image: url("../img/dots_horizontal.svg");
   transform: rotate(30deg);
 }
 .yearsOnMarket__trails::before {
@@ -1177,7 +1178,6 @@ h1 {
   .yearsOnMarket__trails::before, .yearsOnMarket__trails::after {
     width: 5000px;
     left: 0;
-    border-bottom: 1px dotted #fff;
     transform: rotate(30deg);
     transform-origin: left;
   }
@@ -1195,7 +1195,6 @@ h1 {
   .yearsOnMarket__trails::before, .yearsOnMarket__trails::after {
     width: 150vw;
     left: 0;
-    border-bottom: 1px dotted #fff;
     transform: rotate(30deg);
     transform-origin: left;
   }
@@ -1234,6 +1233,8 @@ h1 {
 .afterWork {
   padding: 0 20px;
   margin: 30px 0;
+  overflow: hidden;
+  width: 100%;
 }
 @media (min-width: 960px) {
   .afterWork {
@@ -1291,10 +1292,23 @@ h1 {
 .afterWork__imgCont {
   margin: 28px 0;
   display: block;
+  position: relative;
 }
 @media (min-width: 960px) {
   .afterWork__imgCont {
     margin: 0;
+  }
+  .afterWork__imgCont::after {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    top: 50%;
+    height: 300vw;
+    width: 2px;
+    background-image: url("../img/dots.svg");
+    transform: rotate(-90deg);
+    transform-origin: top;
+    z-index: -1;
   }
 }
 
@@ -1390,13 +1404,21 @@ h1 {
 
 .contact__arrow {
   position: absolute;
-  left: 25px;
-  margin-top: -15px;
+  right: 0;
+  width: 100%;
   z-index: 5;
 }
+.contact__arrow .arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 90vw;
+  transform: rotate(90deg);
+  transform-origin: top;
+}
 @media (min-width: 960px) {
-  .contact__arrow {
-    width: 55vw;
+  .contact__arrow .arrow {
+    height: 50vw;
   }
 }
 
@@ -1517,7 +1539,8 @@ h1 {
   top: 50%;
   width: 100vw;
   transform: translateY(-50%);
-  border-bottom: 1px dotted #fff;
+  height: 1px;
+  background-image: url("../img/dots_horizontal.svg");
   z-index: -1;
 }
 @media (min-width: 960px) {
@@ -1535,7 +1558,8 @@ h1 {
     width: 20vw;
     transform: translateY(-50%) rotate(-45deg);
     transform-origin: left;
-    border-bottom: 1px dotted #fff;
+    height: 1px;
+    background-image: url("../img/dots_horizontal.svg");
     z-index: -1;
     font-size: 24px;
   }
@@ -1557,7 +1581,9 @@ h1 {
 }
 
 .footer {
-  border-top: 1px dotted #fff;
+  background-image: url("../img/dots_horizontal.svg");
+  background-position-y: top;
+  background-repeat: repeat-x;
   padding: 30px 40px;
   display: grid;
   justify-items: center;
@@ -1569,6 +1595,7 @@ h1 {
     justify-items: start;
     padding-left: 60px;
     padding-right: 80px;
+    padding-top: 54px;
     grid-gap: 7.8125vw;
   }
 }
@@ -1788,17 +1815,25 @@ h1 {
     justify-content: center;
   }
 }
-.bigLetters__arrowCont .bigLetters__arrow {
+.bigLetters__arrowCont .bigLetters__arrowCont {
   height: 250px;
+  position: relative;
+}
+.bigLetters__arrowCont .bigLetters__arrowCont .arrow {
+  position: absolute;
+  left: 0;
 }
 @media (min-width: 768px) {
-  .bigLetters__arrowCont .bigLetters__arrow {
+  .bigLetters__arrowCont .bigLetters__arrowCont {
     height: 400px;
   }
 }
 @media (min-width: 960px) {
-  .bigLetters__arrowCont .bigLetters__arrow {
+  .bigLetters__arrowCont .bigLetters__arrowCont {
     height: 90vh;
+  }
+  .bigLetters__arrowCont .bigLetters__arrowCont .arrow {
+    left: 50%;
   }
 }
 .bigLetters__arrowCont .bigLetters__arrowText {
@@ -1807,13 +1842,13 @@ h1 {
   transform-origin: left;
   position: absolute;
   top: 60%;
-  left: 55px;
+  left: 60px;
   font-size: 9px;
 }
 @media (min-width: 768px) {
   .bigLetters__arrowCont .bigLetters__arrowText {
     font-size: 2.2916666667vw;
-    left: calc(50% + 1em);
+    left: calc(50% + 1.25em);
     top: 65%;
   }
 }

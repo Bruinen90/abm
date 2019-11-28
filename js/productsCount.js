@@ -36,21 +36,26 @@ const animateCounter = () => {
 		getElScroll(historyImg, true)}vh)`;
 
 	if (window.innerWidth > 959) {
-		eventsCount.style.transform = `translate(${-0.5 *
-			Math.abs(getElScroll(eventsCount))}%, ${-0.5 *
-			Math.abs(getElScroll(eventsCount))}%)`;
+		// eventsCount.style.transform = `translate(${-0.5 *
+		// 	Math.abs(getElScroll(eventsCount))}%, ${-0.5 *
+		// 	Math.abs(getElScroll(eventsCount))}%)`;
+        const transformCount = getElScroll(eventsCount);
+		if (transformCount > 0) {
+			eventsCount.style.transform = `translate(${-0.5 *
+				transformCount}%, ${-0.5 * transformCount}%)`;
+		}
 	}
 
 	// A to Z
 	let bigLTPace = window.innerWidth < 960 ? 0.1 : 0.175;
 	bigLettersText.style.transform = `translateY(${-bigLTPace *
 		getElScroll(bigLettersCont)}vh) rotate(-90deg)`;
-	const AOpacity = (0.5 * getElScroll(bigLettersCont) + 20);
-	const ZOpacity = -1*AOpacity + 40;
-	bigA.style.opacity = AOpacity+'%';
-	timeFrom.style.opacity = AOpacity+'%';
-	bigZ.style.opacity = ZOpacity+'%';
-	timeTo.style.opacity = ZOpacity+'%';
+	const AOpacity = 0.5 * getElScroll(bigLettersCont) + 20;
+	const ZOpacity = -1 * AOpacity + 40;
+	bigA.style.opacity = AOpacity + '%';
+	timeFrom.style.opacity = AOpacity + '%';
+	bigZ.style.opacity = ZOpacity + '%';
+	timeTo.style.opacity = ZOpacity + '%';
 
 	// Years on market trolley problem
 	if (window.innerWidth < 960) {

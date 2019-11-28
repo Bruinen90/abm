@@ -56,7 +56,8 @@
         top: 50%;
         width: 100vw;
         transform: translateY(-50%);
-        border-bottom: 1px dotted #fff;
+        height: 1px;
+        background-image: url('../img/dots_horizontal.svg');
         z-index: -1;
 
         @media (min-width: $laptop) {
@@ -73,7 +74,8 @@
                 width: 20vw ;
                 transform: translateY(-50%) rotate(-45deg);
                 transform-origin: left;
-                border-bottom: 1px dotted #fff;
+                height: 1px;
+                background-image: url('../img/dots_horizontal.svg');
                 z-index: -1;
                 font-size: 24px;
             }

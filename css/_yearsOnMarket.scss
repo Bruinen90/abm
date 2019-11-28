@@ -38,7 +38,8 @@
         position: absolute;
         width: 500px;
         left: -50px;
-        border-bottom: 1px dotted #fff;
+        height: 1px;
+        background-image: url('../img/dots_horizontal.svg');
         transform: rotate(30deg);
     }
 
@@ -56,7 +57,6 @@
         &::before, &::after {
             width: 5000px;
             left: 0;
-            border-bottom: 1px dotted #fff;
             transform: rotate(30deg);
             transform-origin: left;
         }
@@ -76,7 +76,6 @@
         &::before, &::after {
             width: 150vw;
             left: 0;
-            border-bottom: 1px dotted #fff;
             transform: rotate(30deg);
             transform-origin: left;
         }

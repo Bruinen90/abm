@@ -31,18 +31,20 @@
         margin-top: 0;
 
         &::before, .arrow {
-            top: 25vw;
-            left: 50%;
         }
 
         &::before {
             transform: translateY(calc(-100%)) rotate(45deg);
-            height: 36vw;
+            height: 35.35vw;
+            left: calc(50% + 9px);
+            top: calc(25vw - 3px);
         }
 
         .arrow {
             left: calc(50% - 7.5px);
             height: 50%;
+            top: 25vw;
+            left: 50%;
         }
     }
 
