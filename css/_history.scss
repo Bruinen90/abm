@@ -5,14 +5,10 @@
     background-position-x: 80%;
     position: relative;
 
-    @media (min-width: $tablet) {
-     }
-
     @media (min-width: $laptop) {
-        max-width: 80%;
-        padding: 200px auto;
+        width: 100%;
+        padding: 200px 10%;
         margin: 0 auto;
-        background-position-x: 81.25%;
     }
 }
 

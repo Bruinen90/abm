@@ -30,12 +30,9 @@
         padding-top: 25vw; 
         margin-top: 0;
 
-        &::before, .arrow {
-        }
-
         &::before {
-            transform: translateY(calc(-100%)) rotate(45deg);
-            height: 35.35vw;
+            transform: translateY(calc(-100%)) rotate(49.5deg);
+            height: 38vw;
             left: calc(50% + 9px);
             top: calc(25vw - 3px);
         }

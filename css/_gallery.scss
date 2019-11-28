@@ -7,7 +7,7 @@
     font-size: 50px;
     margin-left: 30px;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
        @include relSize('font-size', 201);
        @include relSize('margin-left', 163);
     }
@@ -16,6 +16,10 @@
 .gallery__sliderCont {
     height: 288px;
     position: relative;
+
+    @media (min-width: $tablet) {
+        height: 60vh;
+     }
 
     @media (min-width: $laptop) {
        height: 80vh;

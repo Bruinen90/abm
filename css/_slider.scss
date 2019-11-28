@@ -20,9 +20,10 @@
         right: auto;
         left: 4px;
         transform: translateY(-50%) rotate(180deg);
+        opacity: 0.5;
     }
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         @include relSize('width', 60);
         @include relSize('height', 120);
     }
@@ -32,6 +33,7 @@
     display: flex;
     height: 100%;
     transition: transform .25s ease-in-out;
+    pointer-events: none;
 }
 
 .slider__img {
@@ -39,6 +41,11 @@
     width: 40vw;
     flex-shrink: 0;
     object-fit: cover;
+    pointer-events: none;
+
+    @media (min-width: $tablet) {
+        width: 33vw;
+     }
 
     @media (min-width: $laptop) {
        width: 20vw;

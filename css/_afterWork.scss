@@ -18,7 +18,7 @@
     margin-bottom: 21px;
     text-transform: uppercase;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         @include relSize('font-size', 101);
         grid-column-end: span 2;
     }
@@ -31,7 +31,7 @@
     margin-bottom: 3px;
     padding-left: 20px;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         grid-column-start: 2;
         font-size: 36px;
         letter-spacing: 12px;
@@ -45,7 +45,7 @@
     line-height: 14px;
     padding-left: 20px;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         font-size: 16px;
         line-height: 19px;
     }
@@ -79,7 +79,7 @@
     width: 100%;
     object-fit: cover;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         height: 495px; 
     }
 }
@@ -109,7 +109,7 @@
     display: block;
     font-size: 9px;
 
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet) {
         font-size: 18px;
     }
 }
