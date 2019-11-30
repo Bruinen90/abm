@@ -1,103 +1,103 @@
 .socials {
-    padding: 0 17px;
-    grid-column-start: 1;
-    grid-row-start: 1;
+	padding: 0 17px;
+	grid-column-start: 1;
+	grid-row-start: 1;
 
-    @media (min-width: $laptop) {
-       align-self: end;
-    }
+	@media (min-width: $laptop) {
+		align-self: end;
+	}
 }
 
 .socials__header {
-    @include strokeText;
-    font-size: 54px;
-    line-height: 1;
+	@include strokeText;
+	font-size: 54px;
+	line-height: 1;
 
-    @media (min-width: $laptop) {
-        transform: rotate(-45deg);
-        margin-left: 25vw;
-        transform-origin: left;
-    }
+	@media (min-width: $laptop) {
+		transform: rotate(-45deg);
+		margin-left: 25vw;
+		transform-origin: left;
+	}
 }
 
 .socials__subHeader {
-    font-size: 9px;
-    text-transform: uppercase;
-    margin-left: 37px;
+	font-size: 9px;
+	text-transform: uppercase;
+	margin-left: 37px;
 
-    @media (min-width: $laptop) {
-       display: none;
-    }
+	@media (min-width: $laptop) {
+		display: none;
+	}
 }
 
 .socials__grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 80px 40px;
-    margin: 45px 0; 
-    align-items: center;
-    padding-left: 52px;
-    padding-right: 68px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 80px 40px;
+	margin: 45px 0;
+	align-items: center;
+	padding-left: 52px;
+	padding-right: 68px;
 
-    @media (min-width: $laptop) {
-       @include relSize('width', 567);
-    }
+	@media (min-width: $laptop) {
+		@include relSize('width', 567);
+	}
 }
 
 .socials__title {
-    font-size: 18px;
-    font-weight: 900;
-    position: relative;
+	font-size: 18px;
+	font-weight: 900;
+	position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: -69px;
-        top: 50%;
-        width: 100vw;
-        transform: translateY(-50%);
-        height: 1px;
-        background-image: url('../img/dots_horizontal.svg');
-        z-index: -1;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -69px;
+		top: 50%;
+		width: 100vw;
+		transform: translateY(-50%);
+		height: 1px;
+		background-image: url('../img/dots_horizontal.svg');
+		z-index: -1;
 
-        @media (min-width: $laptop) {
-            width: 25vw;
-            font-size: 24px;
-        }
-    }
-    @media (min-width: $laptop) {
-        &::after {
-                content: '';
-                position: absolute;
-                left: calc(25vw - 67px);
-                top: 50%;
-                width: 20vw ;
-                transform: translateY(-50%) rotate(-45deg);
-                transform-origin: left;
-                height: 1px;
-                background-image: url('../img/dots_horizontal.svg');
-                z-index: -1;
-                font-size: 24px;
-            }
-        }
+		@media (min-width: $laptop) {
+			width: 25vw;
+			font-size: 24px;
+		}
+	}
+	@media (min-width: $laptop) {
+		&::after {
+			content: '';
+			position: absolute;
+			left: calc(25vw - 67px);
+			top: 50%;
+			width: 20vw;
+			transform: translateY(-50%) rotate(-45deg);
+			transform-origin: left;
+			height: 1px;
+			background-image: url('../img/dots_horizontal.svg');
+			z-index: -1;
+			font-size: 24px;
+		}
+	}
 
-        &:nth-child(1) {
-            &::after {
-                width: 27vw;
-            }
-        }
+	&:nth-child(1) {
+		&::after {
+			width: 27vw;
+		}
+	}
 
-        &:nth-child(5) {
-            &::after {
-                width: 13vw;
-            }
-        }
+	&:nth-child(5) {
+		&::after {
+			width: 13vw;
+		}
+	}
 }
 
 .socials__icon {
-    width: 45px;
+	width: 45px;
 
-    @media (min-width: $laptop) {
-       width: 35px;
-    }
+	@media (min-width: $laptop) {
+		width: 35px;
+	}
 }

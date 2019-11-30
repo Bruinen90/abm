@@ -1,111 +1,114 @@
 .yearsOnMarket {
-    position: relative;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
 
-    @media (min-width: $tablet) {
-        padding: 300px 0;
-    }
+	@media (min-width: $tablet) {
+		padding: 300px 0;
+	}
 }
 
 .yearsOnMarket__train {
-    padding-top: 90px;
-    position: relative;
+	padding-top: 90px;
+	position: relative;
 }
 
 .yearsOnMarket__wagon {
-    position: absolute;
-    left: 0;
-    top: -20px;
-    height: 211px;
-    z-index: 5;
+	position: absolute;
+	left: 0;
+	top: -20px;
+	height: 211px;
+	z-index: 5;
 
-    @media (min-width: $tablet) {
-        height: 400px;
-        top: -102px;
-    }
+	@media (min-width: $tablet) {
+		height: 400px;
+		top: -102px;
+	}
 
-    @media (min-width: $desktop) {
-        height: 792px;
-        top: -230px;
-    }
+	@media (min-width: $desktop) {
+		height: 792px;
+		top: -230px;
+	}
 }
 
 .yearsOnMarket__trails {
-    height: 400px;
-    position: relative;
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 500px;
-        left: -50px;
-        height: 1px;
-        background-image: url('../img/dots_horizontal.svg');
-        transform: rotate(30deg);
-    }
+	height: 400px;
+	position: relative;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		width: 500px;
+		left: -50px;
+		height: 1px;
+		background-image: url('../img/dots_horizontal.svg');
+		transform: rotate(30deg);
+	}
 
-    &::before {
-        top: 26.5%;
-    }
+	&::before {
+		top: 26.5%;
+	}
 
-    &::after {
-        top: 42.5%;
-    }
+	&::after {
+		top: 42.5%;
+	}
 
-    @media (min-width: $tablet) {
-        height: 700px;
+	@media (min-width: $tablet) {
+		height: 700px;
 
-        &::before, &::after {
-            width: 5000px;
-            left: 0;
-            transform: rotate(30deg);
-            transform-origin: left;
-        }
-    
-        &::before {
-            top: 0%;
-        }
-    
-        &::after {
-            top: 17.2%;
-        }
-    }
+		&::before,
+		&::after {
+			width: 5000px;
+			left: 0;
+			transform: rotate(30deg);
+			transform-origin: left;
+		}
 
-    @media (min-width: $desktop) {
-        height: 1600px;
+		&::before {
+			top: 0%;
+		}
 
-        &::before, &::after {
-            width: 150vw;
-            left: 0;
-            transform: rotate(30deg);
-            transform-origin: left;
-        }
-    
-        &::before {
-            top: 3.8%;
-        }
-    
-        &::after {
-            top: 18.75%;
-        }
-    }
+		&::after {
+			top: 17.2%;
+		}
+	}
+
+	@media (min-width: $desktop) {
+		height: 1600px;
+
+		&::before,
+		&::after {
+			width: 150vw;
+			left: 0;
+			transform: rotate(30deg);
+			transform-origin: left;
+		}
+
+		&::before {
+			top: 3.8%;
+		}
+
+		&::after {
+			top: 18.75%;
+		}
+	}
 }
 
 .yearsOnMarket__text {
-    @include strokeText;
-    font-size: 77px;
-    white-space: nowrap;
-    position: absolute;
-    bottom: .5em;
-    left: 0;
-    transform: rotate(30deg) translateX(70%);
+	@include strokeText;
+	font-size: 77px;
+	white-space: nowrap;
+	position: absolute;
+	bottom: 0.5em;
+	left: 0;
+	transform: rotate(30deg) translateX(70%);
 
-    @media (min-width: $tablet) {
-        font-size: 200px;
-        bottom: 200px;
-    }
+	@media (min-width: $tablet) {
+		font-size: 200px;
+		bottom: 200px;
+	}
 
-    @media (min-width: $desktop) {
-        font-size: 400px;
-        bottom: 300px;
-    }
+	@media (min-width: $desktop) {
+		font-size: 400px;
+		bottom: 300px;
+	}
 }

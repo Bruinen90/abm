@@ -1,27 +1,27 @@
 .gallery {
-    margin: 80px 0;
-    margin-bottom: 20vh;
+	margin: 80px 0;
+	margin-bottom: 20vh;
 }
 
 .gallery__header {
-    font-size: 50px;
-    margin-left: 30px;
+	font-size: 50px;
+	margin-left: 30px;
 
-    @media (min-width: $tablet) {
-       @include relSize('font-size', 201);
-       @include relSize('margin-left', 163);
-    }
+	@media (min-width: $tablet) {
+		@include relSize('font-size', 201);
+		@include relSize('margin-left', 163);
+	}
 }
 
 .gallery__sliderCont {
-    height: 288px;
-    position: relative;
+	height: 288px;
+	position: relative;
 
-    @media (min-width: $tablet) {
-        height: 60vh;
-     }
+	@media (min-width: $tablet) {
+		height: 60vh;
+	}
 
-    @media (min-width: $laptop) {
-       height: 80vh;
-    }
+	@media (min-width: $laptop) {
+		height: 80vh;
+	}
 }

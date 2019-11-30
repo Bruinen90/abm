@@ -12,9 +12,9 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<!-- Custom css -->
 		<link rel="stylesheet" href="css/style.css" />
-        <title>ABM</title>
-        <!-- Hammer - swipes API -->
-        <script src="./js/hammer.min.js"></script>
+		<title>ABM</title>
+		<!-- Hammer - swipes API -->
+		<script src="./js/hammer.min.js"></script>
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -65,9 +65,34 @@
 			<section class="welcome">
 				<h1 class="welcome__headerCont">
 					<span class="welcome__header">Wyposażamy</span>
-                    <span class="welcome__subHeader">sklepy</span>
+					<div class="welcome__subHeader">
+						sklepy<img src="./img/icons/x.svg" class="welcome__x" />
+					</div>
 				</h1>
 				<div class="welcome__cell welcome__cell--big">
+					<div class="welcome__newsCont">
+						<div class="welcome__lines">
+							<span class="welcome__line"></span>
+							<span
+								class="welcome__line welcome__line--long"
+							></span>
+							<span class="welcome__line"></span>
+						</div>
+						<div class="welcome__news">
+							<div class="welcome__newsDate">01-03.11</div>
+							<div class="welcome__newsTitle">
+								TARGI MILAN DESIGN
+							</div>
+							<div class="welcome__newsText">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation
+								ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.
+							</div>
+						</div>
+					</div>
 					<div class="welcome__playCont">
 						<div class="welcome__playButton">
 							<img
@@ -76,18 +101,21 @@
 								class="welcome__playIcon"
 							/>
 						</div>
+						<button class="welcome__playText">
+							Odtwórz
+						</button>
 					</div>
 					<a href="/e-sklep.html" class="welcome__button">e-sklep</a>
 				</div>
-				<div class="welcome__cell">
-					<span class="welcome__text welcome__text--bordered">1</span>
+				<div
+					class="welcome__cell welcome__cell--1 welcome__cell--active"
+				>
+					<span class="welcome__text welcome__text--number">1</span>
 					<span class="welcome__text">Realizacje</span>
 				</div>
-				<div class="welcome__cell">
-					<span class="welcome__text">2</span>
-					<span class="welcome__text welcome__text--bordered"
-						>Aktualności</span
-					>
+				<div class="welcome__cell welcome__cell--2">
+					<span class="welcome__text welcome__text--number">2</span>
+					<span class="welcome__text">Aktualności</span>
 				</div>
 			</section>
 			<!-- REALIZACJE -->
@@ -240,7 +268,7 @@
 				</div>
 				<picture class="mission__imgCont">
 					<img
-						src="./img/photos/sklepy.png"
+						src="./img/photos/sklepy.jpg"
 						alt=""
 						class="mission__img"
 					/>

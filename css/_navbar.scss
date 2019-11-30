@@ -1,51 +1,63 @@
 .navbar {
-  width: 100%;
-  height: 50px;
-  background-color: $color--dark;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
-  padding-right: 32px;
-  position: relative;
-  z-index: 100;
-  overflow: hidden;
+	width: 100%;
+	height: 71px;
+	background-color: $color--dark;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 20px;
+	padding-right: 32px;
+	padding-top: 15px;
+	padding-bottom: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	overflow: hidden;
 
-  @media (min-width: $laptop) {
-    height: 100px;
-    background: transparent;
-  }
+	&__logo {
+        width: 77px;
+        
+        @media (min-width: $laptop) {
+           @include relSize('width', 114);
+        }
+	}
 
-  &__hamburger {
-    position: relative;
-    width: 30px;
-    height: 30px;
+	@media (min-width: $laptop) {
+		height: 110px;
+		background: transparent;
+	}
 
-    &Opened,
-    &Closed {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
-      transition: all .25s linear;
-    }
+	&__hamburger {
+		position: relative;
+		width: 30px;
+		height: 30px;
 
-    &Opened {
-      opacity: 0;
-    }
+		&Opened,
+		&Closed {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			transition: all 0.25s linear;
+		}
 
-    &Closed {
-      opacity: 1;
-    }
+		&Opened {
+			opacity: 0;
+		}
 
-    &--active {
-      .navbar__hamburgerOpened {
-        opacity: 1;
-      }
-      .navbar__hamburgerClosed {
-        opacity: 0;
-      }
-    }
-  }
+		&Closed {
+			opacity: 1;
+		}
+
+		&--active {
+			.navbar__hamburgerOpened {
+				opacity: 1;
+			}
+			.navbar__hamburgerClosed {
+				opacity: 0;
+			}
+		}
+	}
 }

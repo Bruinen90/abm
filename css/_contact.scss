@@ -1,121 +1,120 @@
 .contact {
-    @media (min-width: $laptop) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 300px 0;
-     }
+	@media (min-width: $laptop) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 300px 0;
+	}
 }
 
 .contact__content {
-    padding-left: 72px;
-    padding-right: 52px;
-    position: relative;
+	padding-left: 72px;
+	padding-right: 52px;
+	position: relative;
 
-    @media (min-width: $laptop) {
-       grid-column-start: 2;
-       grid-row-start: 1;
-       padding-left: 130px;
-    }
+	@media (min-width: $laptop) {
+		grid-column-start: 2;
+		grid-row-start: 1;
+		padding-left: 130px;
+	}
 }
 
 .contact__header {
-    font-size: 36px;
-    font-weight: 900;
-    text-transform: uppercase;
-    position: relative;
+	font-size: 36px;
+	font-weight: 900;
+	text-transform: uppercase;
+	position: relative;
 
-    &::after {
-        content: '';
-        z-index: 2;
-        background: $color--dark;
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 15px;
-    }
+	&::after {
+		content: '';
+		z-index: 2;
+		background: $color--dark;
+		bottom: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 15px;
+	}
 
-    @media (min-width: $laptop) {
-       @include relSize('font-size', 91);
+	@media (min-width: $laptop) {
+		@include relSize('font-size', 91);
 
-       &::after {
-           @include relSize('height', 40);
-       }
-    }
+		&::after {
+			@include relSize('height', 40);
+		}
+	}
 }
 
 .contact__arrow {
-    position: absolute;
-    right: 0;
-    width: 100%;
-    z-index: 5;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 5;
 
-    .arrow {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        height: 90vw;
-        transform: rotate(90deg);
-        transform-origin: top;
-    }
+	.arrow {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		height: 90vw;
+		transform: rotate(90deg);
+		transform-origin: top;
+	}
 
-    @media (min-width: $laptop) {
-       .arrow {
-            height: 50vw;
-       }
-    }
+	@media (min-width: $laptop) {
+		.arrow {
+			height: 50vw;
+		}
+	}
 }
 
 .contact__grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 0 30px;
-    margin: 30px 0;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 0 30px;
+	margin: 30px 0;
 
-    @media (min-width: $laptop) {
-        margin: 80px 0;
-        width: 389px;
-        grid-template-columns: auto 1fr;
-        grid-gap: 0 70px;
-    }
+	@media (min-width: $laptop) {
+		margin: 80px 0;
+		width: 389px;
+		grid-template-columns: auto 1fr;
+		grid-gap: 0 70px;
+	}
 }
 
 .contact__icon {
-    max-height: 29px;
-    max-width: 29px;
-    grid-row-end: span 2;
-    margin-top: 5px;
+	max-height: 29px;
+	max-width: 29px;
+	grid-row-end: span 2;
+	margin-top: 5px;
 
-    @media (min-width: $laptop) {
-        max-height: 62px;
-        max-width: 62px;
-    }
+	@media (min-width: $laptop) {
+		max-height: 62px;
+		max-width: 62px;
+	}
 }
 
 .contact__title {
-    text-transform: uppercase;
-    font-size: 9px;
-    margin-bottom: 5px;
+	text-transform: uppercase;
+	font-size: 9px;
+	margin-bottom: 5px;
 
-    @media (min-width: $laptop) {
-       font-size: 16px;
-    }
+	@media (min-width: $laptop) {
+		font-size: 16px;
+	}
 }
 
 .contact__data {
-    font-size: 13px;
-    margin-bottom: 30px;
+	font-size: 13px;
+	margin-bottom: 30px;
 
-    a {
-        text-decoration: none;
-    }
+	a {
+		text-decoration: none;
+	}
 
-    @media (min-width: $laptop) {
-       font-size: 24px;
-       margin-bottom: 111px;
-    }
+	@media (min-width: $laptop) {
+		font-size: 24px;
+		margin-bottom: 111px;
+	}
 }
 
 .contact__socialsCont {
-
 }

@@ -1,113 +1,129 @@
 .bigLetters {
-    display: flex;
-    margin-bottom: 80px;
+	display: flex;
+	margin-bottom: 80px;
 
-    @media (min-width: $tablet) {
-       margin-bottom: 145px;
-    }
+	@media (min-width: $tablet) {
+		margin-bottom: 145px;
+	}
 }
 
 .bigLetters__arrowCont {
-    position: relative;
-    padding: 0 38px;
+	position: relative;
+	padding: 0 38px;
 
-    @media (min-width: $tablet) {
-       @include relSize('width', 620);
-       display: flex;
-       justify-content: center;
-    }
+	@media (min-width: $tablet) {
+		@include relSize('width', 620);
+		display: flex;
+		justify-content: center;
+	}
 
-    .bigLetters__arrowCont {
-        height: 250px;
-        position: relative;
+	.bigLetters__arrowCont {
+		height: 250px;
+		position: relative;
 
-        .arrow {
-            position: absolute;
-            left: 0;
-        } 
+		.arrow {
+			position: absolute;
+			left: 0;
+		}
 
-        @media (min-width: $tablet) {
-            height: 400px;
-        }
+		@media (min-width: $tablet) {
+			height: 400px;
+		}
 
-        @media (min-width: $laptop) {
-            height: 90vh;
-           .arrow {
-               left: 50%;
-           }
-        }
-    }
+		@media (min-width: $laptop) {
+			height: 90vh;
+			.arrow {
+				left: 50%;
+			}
+		}
+	}
 
-    .bigLetters__arrowText {
-        text-transform: uppercase;
-        transform: rotate(-90deg);
-        transform-origin: left;
-        position: absolute;
-        top: 60%;
-        left: 60px;
-        font-size: 9px;
+	.bigLetters__arrowText {
+		text-transform: uppercase;
+		transform: rotate(-90deg);
+		transform-origin: left;
+		position: absolute;
+		top: 60%;
+		left: 60px;
+		font-size: 9px;
 
-        @media (min-width: $tablet) {
-           @include relSize('font-size', 44);
-           left: calc(50% + 1.25em);
-           top: 65%;
-        }
-    }
+		@media (min-width: $tablet) {
+			@include relSize('font-size', 44);
+			left: calc(50% + 1.25em);
+			top: 65%;
+		}
+	}
 }
 
 .bigLetters__letterCont {
-    position: relative;
-    width: 170px;
+	position: relative;
+	width: 170px;
 
-    @media (min-width: $tablet) {
-       @include relSize('width', 684+207);
-    }
+	@media (min-width: $tablet) {
+		@include relSize('width', 684+207);
+	}
 }
 
 .bigLetters__letter {
-    position: absolute;
-    bottom: 0;
-    @include strokeText;
-    font-size: 200px;
-    line-height: 0.7em;
+	position: absolute;
+	bottom: 0;
+	@include strokeText;
+	font-size: 200px;
+	line-height: 0.7em;
 
-    @media (min-width: $tablet) {
-        @include relSize('font-size', 1000);
-    }
+	&::after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100vw;
+		bottom: 0;
+		right: -100vw;
+		background-image: url('../img/dots_horizontal.svg');
+	}
 
-    &--a {
-        opacity: 1;
-    }
+	@media (min-width: $tablet) {
+		@include relSize('font-size', 1000);
+	}
 
-    &--z {
-        opacity: 0;
-    }
+	&--a {
+		opacity: 1;
+	}
+
+	&--z {
+		opacity: 0;
+	}
+
+	@media (min-width: $laptop) {
+		&::after {
+			right: -99vw;
+		}
+	}
 }
 
 .bigLetters__timeCont {
-    position: relative;
-    align-self: center;
-    margin-top: -25%;
+	position: relative;
+	align-self: center;
+	margin-top: -25%;
 
-    @media (min-width: $tablet) {
-        margin-top: -38%;
-    }
+	@media (min-width: $tablet) {
+		margin-top: -38%;
+	}
 }
 
 .bigLetters__time {
-    @include strokeText;
-    font-size: 30px;
-    position: absolute;
+	@include strokeText;
+	font-size: 30px;
+	position: absolute;
 
-    @media (min-width: $tablet) {
-       @include relSize('font-size', 135);
-    }
+	@media (min-width: $tablet) {
+		@include relSize('font-size', 135);
+	}
 
-    &--from {
-        opacity: 1;
-    }
+	&--from {
+		opacity: 1;
+	}
 
-    &--to {
-        opacity: 0;
-    }
+	&--to {
+		opacity: 0;
+	}
 }

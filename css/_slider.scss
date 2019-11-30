@@ -1,53 +1,53 @@
 .slider {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 .slider__arrow {
-    width: 11px;
-    height: 23px;
-    position: absolute;
-    top: 50%;
-    right: 4px;
-    transform: translateY(-50%);
-    z-index: 5;
-    cursor: pointer;
+	width: 11px;
+	height: 23px;
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	transform: translateY(-50%);
+	z-index: 5;
+	cursor: pointer;
 
-    &--prev {
-        right: auto;
-        left: 4px;
-        transform: translateY(-50%) rotate(180deg);
-        opacity: 0.5;
-    }
+	&--prev {
+		right: auto;
+		left: 4px;
+		transform: translateY(-50%) rotate(180deg);
+		opacity: 0.5;
+	}
 
-    @media (min-width: $tablet) {
-        @include relSize('width', 60);
-        @include relSize('height', 120);
-    }
+	@media (min-width: $tablet) {
+		@include relSize('width', 60);
+		@include relSize('height', 120);
+	}
 }
 
 .slider__imagesCont {
-    display: flex;
-    height: 100%;
-    transition: transform .25s ease-in-out;
-    pointer-events: none;
+	display: flex;
+	height: 100%;
+	transition: transform 0.25s ease-in-out;
+	pointer-events: none;
 }
 
 .slider__img {
-    height: 100%;
-    width: 40vw;
-    flex-shrink: 0;
-    object-fit: cover;
-    pointer-events: none;
+	height: 100%;
+	width: 40vw;
+	flex-shrink: 0;
+	object-fit: cover;
+	pointer-events: none;
 
-    @media (min-width: $tablet) {
-        width: 33vw;
-     }
+	@media (min-width: $tablet) {
+		width: 33vw;
+	}
 
-    @media (min-width: $laptop) {
-       width: 20vw;
-    }
+	@media (min-width: $laptop) {
+		width: 20vw;
+	}
 }

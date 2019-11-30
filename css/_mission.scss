@@ -1,107 +1,106 @@
 .mission {
-    background-image: url('../img/dots.svg');
-    background-repeat: repeat-y;
-    background-position-x: 80%;
+	background-image: url('../img/dots.svg');
+	background-repeat: repeat-y;
+	background-position-x: 80%;
 
-    @media (min-width: $tablet) {
-       background-position-x: 80%;
-       padding-bottom: 15vh;
-    }
+	@media (min-width: $tablet) {
+		background-position-x: 80%;
+		padding-bottom: 15vh;
+	}
 }
 
-
 .mission__header {
-    font-size: 67px;
-    font-weight: 900;
-    color: $color--dark;
-    -webkit-text-stroke: 1px #fff;
+	font-size: 67px;
+	font-weight: 900;
+	color: $color--dark;
+	-webkit-text-stroke: 1px #fff;
 
-    @media (min-width: $tablet) {
-        font-size: 16.5vw;
-        white-space: nowrap;
-        text-align: right;
-        @include relSize('margin-right', -75);
-    }
+	@media (min-width: $tablet) {
+		font-size: 16.5vw;
+		white-space: nowrap;
+		text-align: right;
+		@include relSize('margin-right', -75);
+	}
 }
 
 .mission__text {
-    padding-left: 40px;
-    padding-right: 22px;
-    margin: 20px 0;
-    position: relative;
+	padding-left: 40px;
+	padding-right: 22px;
+	margin: 20px 0;
+	position: relative;
 
-    @media (min-width: $tablet) {
-        width: 28vw;
-        min-width: 500px;
-        margin-left: 5vw;
-        margin-bottom: 88px;
-        margin-top: 88px;
-    }
+	@media (min-width: $tablet) {
+		width: 28vw;
+		min-width: 500px;
+		margin-left: 5vw;
+		margin-bottom: 88px;
+		margin-top: 88px;
+	}
 
-    @media (min-width: $laptop) {
-        margin-left: 18.5vw;
-        width: auto;
-        max-width: 33vw;
-    }
+	@media (min-width: $laptop) {
+		margin-left: 18.5vw;
+		width: auto;
+		max-width: 33vw;
+	}
 }
 
 .mission__title {
-    text-transform: uppercase;
+	text-transform: uppercase;
 
-    .mission__subTitle {
-        font-size: 13px;
-        margin-left: 3px;
-        @media (min-width: $tablet) {
-            font-size: 2.5vw;
-        }
-    }
+	.mission__subTitle {
+		font-size: 13px;
+		margin-left: 3px;
+		@media (min-width: $tablet) {
+			font-size: 2.5vw;
+		}
+	}
 
-    .mission__mainTitle {
-        color: $color--vivid--light;
-        font-size: 40px;
-        line-height: 1;
-        @media (min-width: $tablet) {
-            font-size: 7.9vw;
-        }
-    }
+	.mission__mainTitle {
+		color: $color--vivid--light;
+		font-size: 40px;
+		line-height: 1;
+		@media (min-width: $tablet) {
+			font-size: 7.9vw;
+		}
+	}
 }
 
 .mission__description {
-    font-size: 10px;
-    @media (min-width: $tablet) {
-        font-size: 16px;
-        max-width: 500px;
-        padding-right: 22px;
-    }
+	font-size: 10px;
+	@media (min-width: $tablet) {
+		font-size: 16px;
+		max-width: 500px;
+		padding-right: 22px;
+	}
 }
 
 .mission__arrowCont {
-    display: none;
+	display: none;
 
-    @media (min-width: $laptop) {
-       display: block;
+	@media (min-width: $laptop) {
+		display: block;
 
-       .arrow { 
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    }
+		.arrow {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
 .mission__imgCont {
-    width: 100%;
+	width: 100%;
 }
 
 .mission__img {
-    object-fit: cover;
-    height: 244px;
-    width: 100%;
-    @media (min-width: $tablet) {
-        height: 50vh;
-    }
+	object-fit: cover;
+	height: 244px;
+	width: 100%;
+	@media (min-width: $tablet) {
+		height: 50vh;
+	}
 
-    @media (min-width: $laptop) {
-        height: 100vh;
-    }
+	@media (min-width: $laptop) {
+		height: 100vh;
+	}
 }

@@ -1,15 +1,24 @@
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin relSize($property, $pixelsSize) {
-    #{$property}: ($pixelsSize/19.2)+vw;
+	#{$property}: ($pixelsSize/19.2) + vw;
 }
 
 @mixin strokeText {
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
+	font-weight: 900;
+	color: transparent;
+	-webkit-text-stroke: 1px #fff;
+}
+
+@mixin cover($opacity) {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, $opacity);
 }
