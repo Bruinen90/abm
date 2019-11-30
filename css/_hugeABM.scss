@@ -1,0 +1,14 @@
+.hugeABM {
+    display: none;
+
+    @media (min-width: $laptop) {
+       display: block;
+       position: fixed;
+       right: 0;
+       top: 50vh;
+       transform: translateY(-50%) translateX(33%) rotate(90deg);
+       @include relSize('font-size', 359);
+       @include strokeText;
+       z-index: -1;
+    }
+}

@@ -2,7 +2,8 @@
 	max-height: 100vh;
 	display: grid;
 	grid-template: 480px 1fr / 1fr 1fr;
-	position: relative;
+    position: relative;
+    background-color: $color--dark;
 
 	@media (min-width: $laptop) {
 		height: 100vh;
@@ -251,8 +252,18 @@
 		display: block;
 		position: static;
 		z-index: 5;
-		font-size: 9px;
-	}
+        font-size: 9px;
+        @include relSize('max-width', 243);
+    }
+
+    .welcome__newsDate {
+        letter-spacing: 3px;
+    }
+    
+    .welcome__newsTitle {
+        text-transform: uppercase;
+
+    }
 }
 
 .welcome__button {

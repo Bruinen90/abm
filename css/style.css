@@ -229,6 +229,7 @@ h1 {
   display: grid;
   grid-template: 480px 1fr/1fr 1fr;
   position: relative;
+  background-color: #141414;
 }
 @media (min-width: 960px) {
   .welcome {
@@ -475,7 +476,14 @@ h1 {
     position: static;
     z-index: 5;
     font-size: 9px;
+    max-width: 12.65625vw;
   }
+}
+.welcome__newsCont .welcome__newsDate {
+  letter-spacing: 3px;
+}
+.welcome__newsCont .welcome__newsTitle {
+  text-transform: uppercase;
 }
 
 .welcome__button {
@@ -616,7 +624,6 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 54px;
-  background-color: #141414;
 }
 @media (min-width: 768px) {
   .realizations__header {
@@ -2245,6 +2252,24 @@ h1 {
     left: 3px;
     width: 15px;
     height: 15px;
+  }
+}
+
+.hugeABM {
+  display: none;
+}
+@media (min-width: 960px) {
+  .hugeABM {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    transform: translateY(-50%) translateX(33%) rotate(90deg);
+    font-size: 18.6979166667vw;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    z-index: -1;
   }
 }
 

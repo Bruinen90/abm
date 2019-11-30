@@ -33,9 +33,9 @@ arrowNext.addEventListener('click', () => changePhoto(1));
 
 // Swipe handler
 const photosSwiper = new Hammer(document.querySelector('.gallery__sliderCont'));
-photosSwiper.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL, threshold: 5 });
-photosSwiper.on("panleft panright", (ev) => {
-    if(ev.type === 'panleft') {
+photosSwiper.get('swipe');
+photosSwiper.on("swipeleft swiperight", (ev) => {
+    if(ev.type === 'swipeleft') {
         changePhoto(1)
     } else {
         changePhoto(-1)
