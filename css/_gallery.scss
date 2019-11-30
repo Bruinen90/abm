@@ -1,6 +1,10 @@
 .gallery {
 	margin: 80px 0;
-	margin-bottom: 20vh;
+    margin-bottom: 5vh;
+    
+    @media (min-width: $laptop) {
+       margin-bottom: 20vh;
+    }
 }
 
 .gallery__header {

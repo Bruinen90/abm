@@ -1,6 +1,7 @@
 .yearsOnMarket {
 	position: relative;
-	overflow: hidden;
+    overflow: hidden;
+    padding-top: 10vh;
 
 	@media (min-width: $tablet) {
 		padding: 300px 0;
