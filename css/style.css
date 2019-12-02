@@ -683,6 +683,10 @@ h1 {
     width: 80%;
     margin-left: auto;
   }
+  .realizations__cell--active .realizations__photoNumber {
+    background-color: #4a1971;
+    color: #fff;
+  }
 }
 .realizations__cell--text {
   display: none;
@@ -725,6 +729,7 @@ h1 {
   .realizations__cell--list .realizations__list li {
     margin-bottom: 32px;
     counter-increment: custom-counter;
+    cursor: pointer;
   }
   .realizations__cell--list .realizations__list li:last-child {
     margin-bottom: 0;

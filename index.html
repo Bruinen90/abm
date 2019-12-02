@@ -117,9 +117,12 @@
 					<span class="welcome__text welcome__text--number">2</span>
 					<span class="welcome__text">Aktualności</span>
 				</div>
-			</section>
-            <!-- REALIZACJE -->
+            </section>
+
+            <!-- Napis w tle -->
             <div class="hugeABM">abm</div>
+
+            <!-- REALIZACJE -->
 			<section class="realizations">
 				<div class="realizations__header">
 					<h2 class="halfFilledHeader" data-text="Realizacje">
@@ -127,7 +130,7 @@
 					</h2>
 				</div>
 				<div class="realizations__grid">
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="empik">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -142,7 +145,7 @@
 							Empik Rynek Kraków
 						</div>
 					</div>
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="frogg">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -157,7 +160,7 @@
 							Żabka Kraków
 						</div>
 					</div>
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="obuwniczy">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -182,7 +185,7 @@
 							zaufało nam ponad 150 sklepów branżowych
 						</div>
 					</div>
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="biuro">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -197,7 +200,7 @@
 							Biuro Gdzieś
 						</div>
 					</div>
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="czteryF">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -212,7 +215,7 @@
 							4F Miechów
 						</div>
 					</div>
-					<div class="realizations__cell">
+					<div class="realizations__cell" id="sklep">
 						<div class="realizations__imgCont">
 							<picture class="realizations__photoWrapper">
 								<img
@@ -234,12 +237,12 @@
 							class="realizations__arrowIcon"
 						/>
 						<ol class="realizations__list">
-							<li>Empik Rynek Kraków</li>
-							<li>Żabka Kraków</li>
-							<li>Obuwniczy</li>
-							<li>Biuro</li>
-							<li>4F Miechów</li>
-							<li>Sklep spożyczy Będzin</li>
+							<li data-id="empik">Empik Rynek Kraków</li>
+							<li data-id="frogg">Żabka Kraków</li>
+							<li data-id="obuwniczy">Obuwniczy</li>
+							<li data-id="biuro">Biuro</li>
+							<li data-id="czteryF">4F Miechów</li>
+							<li data-id="sklep">Sklep spożyczy Będzin</li>
 						</ol>
 					</div>
 				</div>
@@ -703,6 +706,7 @@
 		<!-- Scripts -->
 		<script src="./js/menu.js"></script>
 		<script src="./js/productsCount.js"></script>
-		<script src="./js/slider.js"></script>
+        <script src="./js/slider.js"></script>
+		<script src="./js/realizations.js"></script>
 	</body>
 </html>

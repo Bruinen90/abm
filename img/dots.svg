@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1" height="6" viewBox="0 0 1 6">
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="7" viewBox="0 0 1 7">
   <defs>
     <style>
       .cls-1 {
         fill: none;
         stroke: #fff;
-        stroke-dasharray: 1 5;
+        stroke-dasharray: 2 6;
       }
     </style>
   </defs>
-  <line class="cls-1" y2="6" transform="translate(0.5)"/>
+  <line class="cls-1" y2="7" transform="translate(0.5)"/>
 </svg>

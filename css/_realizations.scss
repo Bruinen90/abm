@@ -73,7 +73,15 @@
 		&:nth-child(5) {
 			width: 80%;
 			margin-left: auto;
-		}
+        }
+        
+            
+        &--active {
+            .realizations__photoNumber {
+                background-color: $color--vivid--dark;
+                color: #fff;
+            }
+        }
 	}
 
 	&--text {
@@ -113,7 +121,8 @@
 				counter-reset: custom-counter;
 				li {
 					margin-bottom: 32px;
-					counter-increment: custom-counter;
+                    counter-increment: custom-counter;
+                    cursor: pointer;
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -127,7 +136,7 @@
 				}
 			}
 		}
-	}
+    }
 }
 
 .realizations__imgCont {
