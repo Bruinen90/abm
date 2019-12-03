@@ -146,6 +146,23 @@ h1 {
 @media (min-width: 960px) {
   .menu__link {
     font-size: 16px;
+    position: relative;
+  }
+  .menu__link::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: 0.25em;
+    height: 0.75em;
+    background-image: linear-gradient(to bottom, transparent 0, #4a1971 0);
+    background-position-y: 16px;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: all 0.2s linear;
+  }
+  .menu__link:hover::after {
+    background-position-y: 0;
   }
 }
 
@@ -740,6 +757,31 @@ h1 {
     font-weight: 900;
     -webkit-text-stroke: 1px #fff;
     margin-right: 37px;
+    transition: all 0.2s linear;
+  }
+}
+@media (min-width: 960px) {
+  .realizations__cell--list .realizations__list li {
+    position: relative;
+  }
+  .realizations__cell--list .realizations__list li::after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    right: -5px;
+    bottom: -0.25em;
+    height: 0.85em;
+    background-image: linear-gradient(to bottom, transparent 0, #4a1971 0);
+    background-position-y: 0.85em;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: all 0.2s linear;
+  }
+  .realizations__cell--list .realizations__list li:hover::before {
+    -webkit-text-stroke-color: #8d3cd0;
+  }
+  .realizations__cell--list .realizations__list li:hover::after {
+    background-position-y: 0;
   }
 }
 
@@ -1791,8 +1833,7 @@ h1 {
 
 .socials__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 80px 40px;
+  grid-gap: 80px;
   margin: 45px 0;
   align-items: center;
   padding-left: 52px;
@@ -1801,6 +1842,22 @@ h1 {
 @media (min-width: 960px) {
   .socials__grid {
     width: 29.53125vw;
+  }
+}
+
+.socials__linkCont {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  grid-gap: 40px;
+  text-decoration: none;
+}
+@media (min-width: 960px) {
+  .socials__linkCont:hover .socials__title {
+    color: #8d3cd0;
+  }
+  .socials__linkCont:hover img {
+    filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(-80deg);
   }
 }
 
@@ -2045,6 +2102,11 @@ h1 {
 .footer__socialIcon {
   width: 28px;
   height: 28px;
+}
+@media (min-width: 960px) {
+  .footer__socialIcon:hover {
+    filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(-80deg);
+  }
 }
 
 .footer__crLink {

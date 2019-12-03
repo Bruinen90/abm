@@ -73,15 +73,14 @@
 		&:nth-child(5) {
 			width: 80%;
 			margin-left: auto;
-        }
-        
-            
-        &--active {
-            .realizations__photoNumber {
-                background-color: $color--vivid--dark;
-                color: #fff;
-            }
-        }
+		}
+
+		&--active {
+			.realizations__photoNumber {
+				background-color: $color--vivid--dark;
+				color: #fff;
+			}
+		}
 	}
 
 	&--text {
@@ -121,8 +120,8 @@
 				counter-reset: custom-counter;
 				li {
 					margin-bottom: 32px;
-                    counter-increment: custom-counter;
-                    cursor: pointer;
+					counter-increment: custom-counter;
+					cursor: pointer;
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -131,12 +130,44 @@
 						color: transparent;
 						font-weight: 900;
 						-webkit-text-stroke: 1px #fff;
-						margin-right: 37px;
+                        margin-right: 37px;
+                        transition: all 0.2s linear;
 					}
 				}
 			}
 		}
-    }
+
+		@media (min-width: $laptop) {
+			.realizations__list li {
+                position: relative;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 40px;
+					right: -5px;
+					bottom: -0.25em;
+					height: 0.85em;
+					background-image: linear-gradient(
+						to bottom,
+						transparent 0,
+						$color--vivid--dark 0
+					);
+					background-position-y: 0.85em;
+					background-repeat: no-repeat;
+					z-index: -1;
+					transition: all 0.2s linear;
+				}
+				&:hover {
+                    &::before {
+                        -webkit-text-stroke-color: $color--vivid--light;
+                    }
+					&::after {
+						background-position-y: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 .realizations__imgCont {

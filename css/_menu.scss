@@ -29,8 +29,8 @@
 	@media (min-width: $laptop) {
 		position: static;
 		width: 100%;
-        padding: 0 30px;
-        padding-left: 0;
+		padding: 0 30px;
+		padding-left: 0;
 		background: transparent;
 		display: flex;
 		flex-direction: row-reverse;
@@ -67,6 +67,31 @@
 
 	@media (min-width: $laptop) {
 		font-size: 16px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: -10px;
+			right: -10px;
+			bottom: 0.25em;
+			height: 0.75em;
+			background-image: linear-gradient(
+				to bottom,
+				transparent 0,
+				$color--vivid--dark 0
+			);
+			background-position-y: 16px;
+			background-repeat: no-repeat;
+            z-index: -1;
+            transition: all 0.2s linear;
+		}
+
+		&:hover {
+			&::after {
+				background-position-y: 0;
+			}
+		}
 	}
 }
 
@@ -77,10 +102,10 @@
 	margin-top: 3rem;
 
 	@media (min-width: $laptop) {
-        margin: 0;
-        @include relSize('margin-left', 185);
-        @include relSize('font-size', 18);
-        font-weight: 900;
+		margin: 0;
+		@include relSize('margin-left', 185);
+		@include relSize('font-size', 18);
+		font-weight: 900;
 	}
 }
 
@@ -109,20 +134,20 @@
 	}
 
 	@media (min-width: $laptop) {
-        margin-right: 4rem;
-        border-bottom-width: 4px;
+		margin-right: 4rem;
+		border-bottom-width: 4px;
 
-        &::after {
-            font-size: 28px;
-        }
+		&::after {
+			font-size: 28px;
+		}
 
-        &:hover {
-            color: $color--vivid--light;
-        }
+		&:hover {
+			color: $color--vivid--light;
+		}
 
-        &--hightlighted {
-            color: #fff;
-        }
+		&--hightlighted {
+			color: #fff;
+		}
 	}
 }
 

@@ -32,8 +32,7 @@
 
 .socials__grid {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-gap: 80px 40px;
+	grid-gap: 80px;
 	margin: 45px 0;
 	align-items: center;
 	padding-left: 52px;
@@ -41,6 +40,25 @@
 
 	@media (min-width: $laptop) {
 		@include relSize('width', 567);
+	}
+}
+
+.socials__linkCont {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	align-items: center;
+	grid-gap: 40px;
+	text-decoration: none;
+
+	@media (min-width: $laptop) {
+		&:hover {
+			.socials__title {
+				color: $color--vivid--light;
+			}
+			img {
+				filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(-80deg);
+			}
+		}
 	}
 }
 
