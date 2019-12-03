@@ -1116,7 +1116,7 @@ h1 {
   top: 0;
   left: 30vw;
   width: 1px;
-  height: 56.5vw;
+  height: 57vw;
   background-image: url("../img/dots.svg");
   transform-origin: bottom;
   transform: translateY(-100%) rotate(60deg);
@@ -2269,6 +2269,69 @@ h1 {
     color: transparent;
     -webkit-text-stroke: 1px #fff;
     z-index: -1;
+  }
+}
+
+.popup {
+  pointer-events: none;
+}
+.popup .popup__cover {
+  opacity: 0;
+  transition: all 0.25s ease-out;
+}
+.popup .popup__wrapper {
+  transform: scale(0.0001);
+  opacity: 0;
+  transition: all 0.25s ease-out;
+}
+.popup--visible {
+  pointer-events: all;
+}
+.popup--visible .popup__cover {
+  opacity: 1;
+}
+.popup--visible .popup__wrapper {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.popup__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding-bottom: 56.5%;
+  z-index: 1000;
+}
+@media (min-width: 960px) {
+  .popup__wrapper {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+.popup__cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  z-index: 1000;
+}
+
+.popup__movie {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 960px) {
+  .popup__movie {
+    height: 70%;
+    top: 15%;
   }
 }
 

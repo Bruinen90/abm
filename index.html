@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<meta
+			name="viewport"
+			content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"
+		/>
 		<!-- Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css?family=Lato:900|Roboto:400,700,900&display=swap"
@@ -60,6 +63,21 @@
 				/>
 			</div>
 		</nav>
+
+		<!-- Popup -->
+		<div class="popup">
+			<div class="popup__cover"></div>
+			<div class="popup__wrapper">
+				<iframe
+					class="popup__movie"
+					src="https://www.youtube.com/embed/Rq59J4_sdLI"
+					frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
+			</div>
+		</div>
+
 		<main>
 			<!-- Główny widok -->
 			<section class="welcome">
@@ -117,12 +135,12 @@
 					<span class="welcome__text welcome__text--number">2</span>
 					<span class="welcome__text">Aktualności</span>
 				</div>
-            </section>
+			</section>
 
-            <!-- Napis w tle -->
-            <div class="hugeABM">abm</div>
+			<!-- Napis w tle -->
+			<div class="hugeABM">abm</div>
 
-            <!-- REALIZACJE -->
+			<!-- REALIZACJE -->
 			<section class="realizations">
 				<div class="realizations__header">
 					<h2 class="halfFilledHeader" data-text="Realizacje">
@@ -706,7 +724,8 @@
 		<!-- Scripts -->
 		<script src="./js/menu.js"></script>
 		<script src="./js/productsCount.js"></script>
-        <script src="./js/slider.js"></script>
-		<script src="./js/realizations.js"></script>
+		<script src="./js/slider.js"></script>
+        <script src="./js/realizations.js"></script>
+		<script src="./js/popup.js"></script>
 	</body>
 </html>
