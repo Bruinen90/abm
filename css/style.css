@@ -399,21 +399,12 @@ h1 {
 }
 @media (min-width: 960px) {
   .welcome__cell--1, .welcome__cell--2 {
-    z-index: 50;
     background-image: none;
     display: grid;
     align-items: end;
     justify-items: center;
     width: 100%;
     justify-content: initial;
-  }
-  .welcome__cell--1:hover .welcome__text--number, .welcome__cell--2:hover .welcome__text--number {
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-  }
-  .welcome__cell--1:hover .welcome__text--number, .welcome__cell--2:hover .welcome__text--number {
-    background-position-y: center;
   }
 }
 .welcome__cell .welcome__text {
@@ -433,18 +424,25 @@ h1 {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    color: #fff;
+    background-position-y: 70vh;
+    background-repeat: no-repeat;
+    transition: all 0.25s ease-in;
+  }
+  .welcome__cell .welcome__text:hover {
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-position-y: center;
   }
 }
 .welcome__cell .welcome__text--number {
   color: #fff;
   -webkit-text-stroke: 0;
-  transition: all 0.25s ease-in;
 }
 @media (min-width: 960px) {
   .welcome__cell .welcome__text--number {
     font-size: 39px;
-    background-repeat: no-repeat;
-    background-position-y: 50vh;
   }
 }
 .welcome__cell--active .welcome__text:not(.welcome__text--number) {
@@ -478,9 +476,24 @@ h1 {
   .welcome__cell .welcome__text:not(.welcome__text--number) {
     grid-row-start: 1;
     border-bottom: 1px solid #fff;
-    -webkit-text-stroke: 0;
-    color: #fff;
     min-height: 250px;
+    color: #fff;
+    -webkit-text-stroke-width: 0;
+  }
+  .welcome__cell .welcome__text:not(.welcome__text--number):hover {
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  }
+}
+@media (min-width: 960px) {
+  .welcome__cell .welcome__text--realizations {
+    background-image: url("../img/photos/gal_04.jpg");
+  }
+}
+@media (min-width: 960px) {
+  .welcome__cell .welcome__text--news {
+    background-image: url("../img/photos/gal_02.jpg");
   }
 }
 
@@ -520,6 +533,29 @@ h1 {
   .welcome__button {
     grid-row-start: 2;
   }
+}
+.welcome__button--desktop {
+  display: none;
+}
+@media (min-width: 960px) {
+  .welcome__button--desktop {
+    display: flex;
+    background: transparent;
+    width: auto;
+    height: auto;
+    margin-bottom: 1vw;
+    margin-left: auto;
+  }
+  .welcome__button--mobile {
+    display: none;
+  }
+}
+
+.welcome__bordered {
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  margin-right: 10px;
 }
 
 .welcome__playCont {
