@@ -121,16 +121,20 @@
 				li {
 					margin-bottom: 32px;
 					counter-increment: custom-counter;
-					cursor: pointer;
+                    cursor: pointer;
+                    position: relative;
+                    padding-left: 40px;
 					&:last-child {
 						margin-bottom: 0;
 					}
 					&::before {
-						content: counter(custom-counter) ' ';
+                        content: counter(custom-counter) ' ';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
 						color: transparent;
 						font-weight: 900;
 						-webkit-text-stroke: 1px #fff;
-                        margin-right: 37px;
                         transition: all 0.2s linear;
 					}
 				}

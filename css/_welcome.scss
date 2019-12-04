@@ -3,7 +3,11 @@
 	display: grid;
 	grid-template: 480px 1fr / 1fr 1fr;
 	position: relative;
-	background-color: $color--dark;
+    background-color: $color--dark;
+    
+    @media (min-width: $tablet) {
+        grid-template: 50vh 25vh / 1fr 1fr;
+    }
 
 	@media (min-width: $laptop) {
 		height: 100vh;
@@ -33,9 +37,10 @@
 			height: 110%;
 			top: -50%;
 			z-index: -1;
-		}
+        }
+        
 
-		@media (min-width: $laptop) {
+		@media (min-width: $tablet) {
 			@include relSize('font-size', 180);
 
 			&::before {
@@ -188,11 +193,6 @@
 			background-position-y: 70vh;
 			background-repeat: no-repeat;
 			transition: all 0.25s ease-in;
-
-			&:hover {
-				@include strokeText;
-				background-position-y: center;
-			}
 		}
 	}
 
@@ -201,7 +201,12 @@
 		-webkit-text-stroke: 0;
 
 		@media (min-width: $laptop) {
-			font-size: 39px;
+            font-size: 39px;
+            
+            &:hover {
+				@include strokeText;
+				background-position-y: center;
+            }
 		}
 	}
 
@@ -236,24 +241,20 @@
 			min-height: 250px;
 			color: #fff;
 			-webkit-text-stroke-width: 0;
-
-			&:hover {
-				@include strokeText;
-			}
 		}
 	}
 
-	.welcome__text--realizations {
-        @media (min-width: $laptop) {
-            background-image: url('../img/photos/gal_04.jpg');
-        }
-    }
+	// .welcome__text--realizations {
+    //     @media (min-width: $laptop) {
+    //         background-image: url('../img/photos/gal_04.jpg');
+    //     }
+    // }
     
-    .welcome__text--news {
-        @media (min-width: $laptop) {
-            background-image: url('../img/photos/gal_02.jpg');
-        }
-    }
+    // .welcome__text--news {
+    //     @media (min-width: $laptop) {
+    //         background-image: url('../img/photos/gal_02.jpg');
+    //     }
+    // }
 }
 
 .welcome__newsCont {

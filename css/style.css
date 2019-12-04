@@ -248,6 +248,11 @@ h1 {
   position: relative;
   background-color: #141414;
 }
+@media (min-width: 768px) {
+  .welcome {
+    grid-template: 50vh 25vh/1fr 1fr;
+  }
+}
 @media (min-width: 960px) {
   .welcome {
     height: 100vh;
@@ -278,7 +283,7 @@ h1 {
   top: -50%;
   z-index: -1;
 }
-@media (min-width: 960px) {
+@media (min-width: 768px) {
   .welcome__header {
     font-size: 9.375vw;
   }
@@ -429,12 +434,6 @@ h1 {
     background-repeat: no-repeat;
     transition: all 0.25s ease-in;
   }
-  .welcome__cell .welcome__text:hover {
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    background-position-y: center;
-  }
 }
 .welcome__cell .welcome__text--number {
   color: #fff;
@@ -443,6 +442,12 @@ h1 {
 @media (min-width: 960px) {
   .welcome__cell .welcome__text--number {
     font-size: 39px;
+  }
+  .welcome__cell .welcome__text--number:hover {
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background-position-y: center;
   }
 }
 .welcome__cell--active .welcome__text:not(.welcome__text--number) {
@@ -479,21 +484,6 @@ h1 {
     min-height: 250px;
     color: #fff;
     -webkit-text-stroke-width: 0;
-  }
-  .welcome__cell .welcome__text:not(.welcome__text--number):hover {
-    font-weight: 900;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-  }
-}
-@media (min-width: 960px) {
-  .welcome__cell .welcome__text--realizations {
-    background-image: url("../img/photos/gal_04.jpg");
-  }
-}
-@media (min-width: 960px) {
-  .welcome__cell .welcome__text--news {
-    background-image: url("../img/photos/gal_02.jpg");
   }
 }
 
@@ -783,16 +773,20 @@ h1 {
     margin-bottom: 32px;
     counter-increment: custom-counter;
     cursor: pointer;
+    position: relative;
+    padding-left: 40px;
   }
   .realizations__cell--list .realizations__list li:last-child {
     margin-bottom: 0;
   }
   .realizations__cell--list .realizations__list li::before {
     content: counter(custom-counter) " ";
+    position: absolute;
+    left: 0;
+    top: 0;
     color: transparent;
     font-weight: 900;
     -webkit-text-stroke: 1px #fff;
-    margin-right: 37px;
     transition: all 0.2s linear;
   }
 }
