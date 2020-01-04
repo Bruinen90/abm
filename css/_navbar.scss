@@ -9,29 +9,32 @@
 	padding-right: 32px;
 	padding-top: 15px;
 	padding-bottom: 12px;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	overflow: hidden;
 
 	&__logo {
-        width: 77px;
-        
-        @media (min-width: $laptop) {
-           @include relSize('width', 114);
-        }
+		width: 77px;
+
+		@media (min-width: $laptop) {
+			@include relSize('width', 114);
+		}
 	}
 
 	@media (min-width: $laptop) {
-		height: 110px;
+        height: 110px;
+        @include relSize('padding-left', 57);
+        @include relSize('padding-right', 78);
 		background: transparent;
 	}
 
 	&__hamburger {
 		position: relative;
 		width: 30px;
-		height: 30px;
+        height: 30px;
+        cursor: pointer;
 
 		&Opened,
 		&Closed {

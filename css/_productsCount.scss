@@ -5,6 +5,8 @@
 	background-position-x: 80%;
 
 	@media (min-width: $tablet) {
+        padding-top: 10vw;
+        padding-bottom: 15vw;
 	}
 }
 
@@ -30,7 +32,8 @@
 	transform: translateX(100%);
 
 	@media (min-width: $tablet) {
-		@include relSize('font-size', 479);
+		// @include relSize('font-size', 479);
+		font-size: 22.94vw;
 		line-height: 0.9;
 	}
 }

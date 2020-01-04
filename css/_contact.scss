@@ -1,8 +1,9 @@
 .contact {
+	background-color: $color--dark;
 	@media (min-width: $laptop) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		margin: 300px 0;
+		padding: 350px 0;
 	}
 }
 

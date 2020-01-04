@@ -1,9 +1,11 @@
 .bigLetters {
 	display: flex;
-	margin-bottom: 80px;
+	padding-bottom: 80px;
+	background-color: $color--dark;
 
 	@media (min-width: $tablet) {
-		margin-bottom: 145px;
+        padding: 50px 0;
+		padding-bottom: 145px;
 	}
 }
 
@@ -82,7 +84,8 @@
 	}
 
 	@media (min-width: $tablet) {
-		@include relSize('font-size', 1000);
+        // @include relSize('font-size', 1000);
+        font-size: 45vw;
 	}
 
 	&--a {

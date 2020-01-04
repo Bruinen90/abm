@@ -1,13 +1,13 @@
 .welcome {
 	max-height: 100vh;
 	display: grid;
-	grid-template: 480px 1fr / 1fr 1fr;
+	grid-template: 87vh 13vh / 1fr 1fr;
 	position: relative;
-    background-color: $color--dark;
-    
-    @media (min-width: $tablet) {
-        grid-template: 50vh 25vh / 1fr 1fr;
-    }
+	background-color: $color--dark;
+
+	@media (min-width: $tablet) {
+		grid-template: 50vh 25vh / 1fr 1fr;
+	}
 
 	@media (min-width: $laptop) {
 		height: 100vh;
@@ -23,6 +23,10 @@
 		position: absolute;
 		top: 20%;
 		z-index: 5;
+
+		@media (min-width: $laptop) {
+			@include relSize('margin-left', 200);
+		}
 	}
 
 	&__header {
@@ -37,8 +41,12 @@
 			height: 110%;
 			top: -50%;
 			z-index: -1;
-        }
-        
+
+			@media (min-width: $laptop) {
+				@include relSize('width', 1720);
+				@include relSize('left', -200);
+			}
+		}
 
 		@media (min-width: $tablet) {
 			@include relSize('font-size', 180);
@@ -55,7 +63,7 @@
 		position: relative;
 		@media (min-width: $tablet) {
 			color: transparent;
-			-webkit-text-stroke: 1px #fff;
+			-webkit-text-stroke: 2px #fff;
 			@include relSize('font-size', 79);
 			@include relSize('letter-spacing', 40);
 		}
@@ -97,8 +105,9 @@
 		flex-direction: row;
 		align-items: flex-end;
 		justify-content: space-between;
-		grid-column-end: span 2;
-		background-image: url('../img/photos/welcome_big.jpg');
+        grid-column-end: span 2;
+        overflow: hidden;
+		// background-image: url('../img/photos/welcome_big.jpg');
 
 		@media (min-width: $laptop) {
 			@include relSize('padding-left', 200);
@@ -201,12 +210,12 @@
 		-webkit-text-stroke: 0;
 
 		@media (min-width: $laptop) {
-            font-size: 39px;
-            
-            &:hover {
+			font-size: 39px;
+
+			&:hover {
 				@include strokeText;
 				background-position-y: center;
-            }
+			}
 		}
 	}
 
@@ -245,16 +254,24 @@
 	}
 
 	// .welcome__text--realizations {
-    //     @media (min-width: $laptop) {
-    //         background-image: url('../img/photos/gal_04.jpg');
-    //     }
-    // }
-    
-    // .welcome__text--news {
-    //     @media (min-width: $laptop) {
-    //         background-image: url('../img/photos/gal_02.jpg');
-    //     }
-    // }
+	//     @media (min-width: $laptop) {
+	//         background-image: url('../img/photos/gal_04.jpg');
+	//     }
+	// }
+
+	// .welcome__text--news {
+	//     @media (min-width: $laptop) {
+	//         background-image: url('../img/photos/gal_02.jpg');
+	//     }
+	// }
+}
+
+.welcome__video {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    min-width: 100%;
 }
 
 .welcome__newsCont {
@@ -290,37 +307,38 @@
 
 	@media (min-width: $laptop) {
 		grid-row-start: 2;
-    }
-    
-    &--desktop {
-        display: none;
-    }
+	}
 
-    @media (min-width: $laptop) {
-       &--desktop {
-           display: flex;
-           background: transparent;
-           width: auto;
-           height: auto;
-           margin-bottom: 1vw;
-           margin-left: auto;
-       }
+	&--desktop {
+		display: none;
+	}
 
-       &--mobile {
-           display: none;
-       }
-    }
+	@media (min-width: $laptop) {
+		&--desktop {
+			display: flex;
+			background: transparent;
+			width: auto;
+			height: auto;
+			margin-bottom: 1vw;
+			margin-left: auto;
+		}
+
+		&--mobile {
+			display: none;
+		}
+	}
 }
 
 .welcome__bordered {
-    @include strokeText;
-    margin-right: 10px;
+	@include strokeText;
+	margin-right: 10px;
 }
 
 .welcome__playCont {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	cursor: pointer;
 
 	@media (min-width: $laptop) {
 		grid-row-start: 2;

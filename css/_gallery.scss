@@ -1,10 +1,9 @@
 .gallery {
 	margin: 80px 0;
-    margin-bottom: 5vh;
-    
-    @media (min-width: $laptop) {
-       margin-bottom: 20vh;
-    }
+	margin-bottom: 0;
+	@media (min-width: $laptop) {
+		margin-bottom: 0;
+	}
 }
 
 .gallery__header {
@@ -20,6 +19,7 @@
 .gallery__sliderCont {
 	height: 288px;
 	position: relative;
+	background-color: $color--dark;
 
 	@media (min-width: $tablet) {
 		height: 60vh;
