@@ -771,6 +771,9 @@ h1 {
   .realizations__cell--active .realizations__photoNumber {
     background-color: #4a1971;
     color: #fff;
+    width: 5.3125vw;
+    height: 5.3125vw;
+    font-size: 2.1875vw;
   }
 }
 .realizations__cell--text {
@@ -890,16 +893,16 @@ h1 {
   right: 0;
   background: #fff;
   color: #141414;
-  width: 75px;
-  height: 75px;
-  font-size: 27px;
+  width: 25px;
+  height: 25px;
+  font-size: 9px;
   font-weight: bold;
 }
 @media (min-width: 768px) {
   .realizations__photoNumber {
-    width: 150px;
-    height: 150px;
-    font-size: 63px;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    font-size: 1.09375vw;
   }
 }
 

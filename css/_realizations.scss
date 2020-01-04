@@ -78,7 +78,10 @@
 		&--active {
 			.realizations__photoNumber {
 				background-color: $color--vivid--dark;
-				color: #fff;
+                color: #fff;
+                @include relSize('width', 102);
+                @include relSize('height', 102);
+                @include relSize('font-size', 42);
 			}
 		}
 	}
@@ -203,15 +206,15 @@
 	right: 0;
 	background: #fff;
 	color: $color--dark;
-	width: 75px;
-	height: 75px;
-	font-size: 27px;
+	width: 25px;
+	height: 25px;
+	font-size: 9px;
 	font-weight: bold;
 
 	@media (min-width: $tablet) {
-		width: 150px;
-		height: 150px;
-		font-size: 63px;
+        @include relSize('width', 51);
+        @include relSize('height', 51);
+        @include relSize('font-size', 21);
 	}
 }
 
