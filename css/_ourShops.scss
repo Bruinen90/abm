@@ -1,0 +1,84 @@
+.ourShops {
+	overflow: hidden;
+	background-color: $color--dark;
+	height: 400px;
+	position: relative;
+
+	&__mapCont {
+		position: absolute;
+		top: -15%;
+		left: -30vw;
+	}
+
+	&__map {
+		width: 80vw;
+	}
+
+	&__addressBox {
+		position: absolute;
+		left: calc(50vw + 50px);
+		top: 21px;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 40px;
+        left: calc(50vw + 15px);
+        width: 24px;
+	}
+
+	&__addressTitle {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: bolder;
+		margin-bottom: 7px;
+	}
+
+	&__subTitle {
+		color: $color--vivid--light;
+		font-size: 11px;
+		margin-bottom: 7px;
+		margin-top: 7px;
+	}
+
+	&__phone,
+	&__mail {
+		display: block;
+		font-size: 8px;
+		line-height: 2em;
+		text-decoration: none;
+	}
+
+	&__phoneIcon {
+		width: 7px;
+		height: 7px;
+	}
+
+	&__employeeCont {
+		display: flex;
+		align-items: center;
+		margin-bottom: 4px;
+	}
+
+	&__employeeName,
+	&__employeePhone {
+		margin-left: 4px;
+		font-size: 6px;
+		text-decoration: none;
+	}
+}
+
+.map {
+	&__contour {
+		fill: $color--dark;
+		stroke: #fff;
+		stroke-width: 1.5px;
+	}
+
+	&__dot {
+		cursor: pointer;
+		stroke: #8d3cd0;
+		stroke-width: 2px;
+		transition: r 0.33s cubic-bezier(0.29, -0.24, 0.42, 2.28);
+	}
+}

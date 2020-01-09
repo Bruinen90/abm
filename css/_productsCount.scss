@@ -2,7 +2,7 @@
 	padding-bottom: 61px;
 	background-image: url('../img/dots.svg');
 	background-repeat: repeat-y;
-	background-position-x: 80%;
+    background-position-x: 80%;
 
 	@media (min-width: $tablet) {
         padding-top: 10vw;
@@ -24,7 +24,7 @@
 	font-weight: 900;
 	-webkit-text-stroke: 1px #fff;
 	text-align: center;
-	transition: transform 0.25s linear;
+    transition: transform 0.25s linear;
 }
 
 .productsCount__number {

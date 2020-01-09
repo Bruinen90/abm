@@ -105,8 +105,8 @@
 		flex-direction: row;
 		align-items: flex-end;
 		justify-content: space-between;
-        grid-column-end: span 2;
-        overflow: hidden;
+		grid-column-end: span 2;
+		overflow: hidden;
 		// background-image: url('../img/photos/welcome_big.jpg');
 
 		@media (min-width: $laptop) {
@@ -208,13 +208,14 @@
 	.welcome__text--number {
 		color: #fff;
 		-webkit-text-stroke: 0;
+		background-size: cover;
 
 		@media (min-width: $laptop) {
 			font-size: 39px;
 
 			&:hover {
 				@include strokeText;
-				background-position-y: center;
+				background-position: center;
 			}
 		}
 	}
@@ -267,11 +268,12 @@
 }
 
 .welcome__video {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    min-width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 
 .welcome__newsCont {
@@ -316,11 +318,19 @@
 	@media (min-width: $laptop) {
 		&--desktop {
 			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 			background: transparent;
 			width: auto;
 			height: auto;
 			margin-bottom: 1vw;
 			margin-left: auto;
+
+			a {
+				text-decoration: none;
+                transition: all 0.75s 0.05s ease-in-out;
+                opacity: 0;
+			}
 		}
 
 		&--mobile {
@@ -410,4 +420,22 @@
 	@media (min-width: $laptop) {
 		display: none;
 	}
+}
+
+.welcome--mobile {
+    -webkit-text-stroke-width: 0;
+	@media (min-width: $laptop) {
+		display: none;
+	}
+}
+
+.welcome--desktop {
+	display: none;
+	@media (min-width: $laptop) {
+		display: inline;
+	}
+}
+
+.welcome__strokeText {
+	@include strokeText;
 }

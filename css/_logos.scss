@@ -1,0 +1,44 @@
+.logos {
+	padding-top: 100px;
+	background-color: $color--dark;
+}
+
+.logos__wrapper {
+	background-color: #fff;
+	padding: 30px 0;
+	@media (min-width: $laptop) {
+		@include relSize('padding-left', 90);
+		@include relSize('padding-right', 90);
+		@include relSize('padding-top', 80);
+	}
+}
+
+.logos__slider {
+	display: flex;
+	transition: all 0.5s ease-in-out;
+
+	@media (min-width: $laptop) {
+		justify-content: space-between;
+	}
+}
+
+.logos__slide {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: calc(100vw - 80px);
+    margin: 0 40px;
+    flex-shrink: 0;
+}
+
+.logos__logo {
+    max-height: 60px;
+    max-width: 60px;
+	flex: 0;
+
+	@media (min-width: $laptop) {
+		width: auto;
+		max-width: calc((100vw / 8) - 22.5px);
+		@include relSize('max-height', 100);
+	}
+}

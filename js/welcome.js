@@ -1,9 +1,16 @@
-const wrapper = document.querySelector('.welcome__button--desktop');
 const cellsArr = document.querySelectorAll('.welcome__text--number');
+const numbersCont = document.querySelector('.welcome__button--desktop');
 
 cellsArr.forEach(cell => {
 	cell.addEventListener('mouseover', () => {
-		wrapper.innerHTML = `<span class="welcome__bordered">0${cell.dataset.number}. </span>
-        ${cell.dataset.text}`;
+		const selectedNum = event.target.getAttribute('data-number');
+		const allLinks = numbersCont.querySelectorAll('a');
+		allLinks.forEach(link => {
+			if (link.getAttribute('data-number') === selectedNum) {
+				link.style.opacity = 1;
+			} else {
+				link.style.opacity = 0;
+			}
+		});
 	});
 });

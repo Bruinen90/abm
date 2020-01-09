@@ -1,7 +1,7 @@
 .yearsOnMarket {
 	position: relative;
 	overflow: hidden;
-	padding-top: calc(10vh + 100px);
+    padding-top: calc(10vh + 100px);
 	background-color: $color--dark;
 
 	@media (min-width: $tablet) {
@@ -21,6 +21,7 @@
 	top: -20px;
 	height: 211px;
 	z-index: 5;
+	transition: all 0.1s;
 
 	@media (min-width: $tablet) {
 		height: 400px;
@@ -101,9 +102,10 @@
 	font-size: 77px;
 	white-space: nowrap;
 	position: absolute;
-	bottom: 0.5em;
+	bottom: 1em;
 	left: 0;
 	transform: rotate(30deg) translateX(70%);
+	transition: all 0.1s;
 
 	@media (min-width: $tablet) {
 		font-size: 200px;
