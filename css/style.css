@@ -487,6 +487,7 @@ h1 {
   text-transform: uppercase;
   margin: 4px 0;
   z-index: 2;
+  cursor: pointer;
 }
 @media (min-width: 960px) {
   .welcome__cell .welcome__text {
@@ -502,6 +503,25 @@ h1 {
     background-position-y: 70vh;
     background-repeat: no-repeat;
     transition: all 0.25s ease-in;
+  }
+  .welcome__cell .welcome__text span.welcome--desktop {
+    display: block;
+    position: relative;
+  }
+  .welcome__cell .welcome__text span.welcome--desktop::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    bottom: -5px;
+    height: 20px;
+    max-height: 0px;
+    background: #5e1e92;
+    z-index: -1;
+    transition: all 0.2s linear;
+  }
+  .welcome__cell .welcome__text:hover span.welcome--desktop::after {
+    max-height: 20px;
   }
 }
 .welcome__cell .welcome__text--number {
@@ -2573,6 +2593,7 @@ h1 {
     padding-left: 4.6875vw;
     padding-right: 4.6875vw;
     padding-top: 4.1666666667vw;
+    padding-bottom: 4.1666666667vw;
   }
 }
 
@@ -2594,6 +2615,14 @@ h1 {
   margin: 0 40px;
   flex-shrink: 0;
 }
+@media (min-width: 960px) {
+  .logos__slide {
+    width: auto;
+    flex: 1;
+    justify-content: space-around;
+    margin: 0;
+  }
+}
 
 .logos__logo {
   max-height: 60px;
@@ -2603,7 +2632,7 @@ h1 {
 @media (min-width: 960px) {
   .logos__logo {
     width: auto;
-    max-width: calc((100vw / 8) - 22.5px);
+    max-width: calc((100vw / 8) - 60px);
     max-height: 5.2083333333vw;
   }
 }
@@ -2611,27 +2640,66 @@ h1 {
 .ourShops {
   overflow: hidden;
   background-color: #141414;
-  height: 400px;
   position: relative;
+  display: grid;
+  grid-template: auto auto/auto auto;
+  padding-bottom: 60px;
 }
-.ourShops__mapCont {
+@media (min-width: 960px) {
+  .ourShops {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.ourShops__mapLine {
+  height: 1px;
+  width: 200px;
+  background: url(../img/dots_horizontal_vivid.svg);
   position: absolute;
-  top: -15%;
-  left: -30vw;
+  z-index: 1;
+  transform-origin: left;
+}
+@media (min-width: 960px) {
+  .ourShops__mapCont {
+    grid-row-end: span 2;
+    padding-bottom: 4.6875vw;
+  }
 }
 .ourShops__map {
+  margin-top: -20%;
+  margin-left: -30vw;
   width: 80vw;
+  overflow: visible;
+}
+@media (min-width: 960px) {
+  .ourShops__map {
+    width: 60vw;
+    margin-top: -17%;
+    margin-left: -8vw;
+  }
 }
 .ourShops__addressBox {
-  position: absolute;
-  left: calc(50vw + 50px);
-  top: 21px;
+  position: relative;
+  padding-left: 35px;
+  padding-top: 21px;
+}
+@media (min-width: 960px) {
+  .ourShops__addressBox {
+    padding-top: 7.5520833333vw;
+    padding-left: 22.0833333333vw;
+  }
 }
 .ourShops__arrow {
   position: absolute;
+  left: 0;
   top: 40px;
-  left: calc(50vw + 15px);
   width: 24px;
+}
+@media (min-width: 960px) {
+  .ourShops__arrow {
+    width: 7.1354166667vw;
+    top: 10.5729166667vw;
+    left: 13.6979166667vw;
+  }
 }
 .ourShops__addressTitle {
   font-size: 16px;
@@ -2639,11 +2707,21 @@ h1 {
   font-weight: bolder;
   margin-bottom: 7px;
 }
+@media (min-width: 960px) {
+  .ourShops__addressTitle {
+    font-size: 1.875vw;
+  }
+}
 .ourShops__subTitle {
   color: #8d3cd0;
   font-size: 11px;
   margin-bottom: 7px;
   margin-top: 7px;
+}
+@media (min-width: 960px) {
+  .ourShops__subTitle {
+    font-size: 1.25vw;
+  }
 }
 .ourShops__phone, .ourShops__mail {
   display: block;
@@ -2651,9 +2729,20 @@ h1 {
   line-height: 2em;
   text-decoration: none;
 }
+@media (min-width: 960px) {
+  .ourShops__phone, .ourShops__mail {
+    font-size: 0.8333333333vw;
+  }
+}
 .ourShops__phoneIcon {
   width: 7px;
   height: 7px;
+}
+@media (min-width: 960px) {
+  .ourShops__phoneIcon {
+    width: 15px;
+    height: 15px;
+  }
 }
 .ourShops__employeeCont {
   display: flex;
@@ -2665,17 +2754,65 @@ h1 {
   font-size: 6px;
   text-decoration: none;
 }
+@media (min-width: 960px) {
+  .ourShops__employeeName, .ourShops__employeePhone {
+    font-size: 0.8333333333vw;
+  }
+}
+.ourShops__header {
+  text-transform: uppercase;
+  grid-column-start: 2;
+}
+@media (min-width: 960px) {
+  .ourShops__header {
+    align-self: end;
+    padding-left: 2.65625vw;
+  }
+}
+.ourShops__subHeader {
+  font-size: 13px;
+  font-weight: bold;
+}
+@media (min-width: 960px) {
+  .ourShops__subHeader {
+    font-size: 2.65625vw;
+  }
+}
+.ourShops__mainHeader {
+  color: #8d3cd0;
+  font-size: 40px;
+}
+@media (min-width: 960px) {
+  .ourShops__mainHeader {
+    font-size: 7.8645833333vw;
+  }
+}
 
 .map__contour {
   fill: #141414;
   stroke: #fff;
   stroke-width: 1.5px;
 }
+@media (min-width: 960px) {
+  .map__contour {
+    stroke-width: 0.5px;
+  }
+}
 .map__dot {
+  position: relative;
   cursor: pointer;
   stroke: #8d3cd0;
   stroke-width: 2px;
   transition: r 0.33s cubic-bezier(0.29, -0.24, 0.42, 2.28);
+  z-index: 100;
+}
+.map__line {
+  width: 1px;
+  height: 100px;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-dasharray: 1, 5;
+  stroke-linecap: round;
 }
 
 /*# sourceMappingURL=style.css.map */

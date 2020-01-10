@@ -1,30 +1,66 @@
 .ourShops {
 	overflow: hidden;
 	background-color: $color--dark;
-	height: 400px;
 	position: relative;
+	display: grid;
+	grid-template: auto auto / auto auto;
+	padding-bottom: 60px;
 
-	&__mapCont {
-		position: absolute;
-		top: -15%;
-		left: -30vw;
+	@media (min-width: $laptop) {
+		grid-template-columns: 1fr 1fr;
 	}
 
+	&__mapLine {
+		height: 1px;
+		width: 200px;
+		background: url(../img/dots_horizontal_vivid.svg);
+		position: absolute;
+		z-index: 1;
+		transform-origin: left;
+    }
+    
+    &__mapCont {
+        @media (min-width: $laptop) {
+           grid-row-end: span 2;
+           @include relSize('padding-bottom', 90);
+        }
+    }
+
 	&__map {
+		margin-top: -20%;
+		margin-left: -30vw;
 		width: 80vw;
+		overflow: visible;
+
+		@media (min-width: $laptop) {
+			width: 60vw;
+			margin-top: -17%;
+            margin-left: -8vw;
+		}
 	}
 
 	&__addressBox {
-		position: absolute;
-		left: calc(50vw + 50px);
-		top: 21px;
+		position: relative;
+		padding-left: 35px;
+		padding-top: 21px;
+
+		@media (min-width: $laptop) {
+			@include relSize('padding-top', 145);
+			@include relSize('padding-left', 424);
+		}
 	}
 
 	&__arrow {
 		position: absolute;
+		left: 0;
 		top: 40px;
-        left: calc(50vw + 15px);
         width: 24px;
+        
+        @media (min-width: $laptop) {
+            @include relSize('width', 137);
+            @include relSize('top', 203);
+			@include relSize('left', 263);
+        }
 	}
 
 	&__addressTitle {
@@ -32,13 +68,21 @@
 		text-transform: uppercase;
 		font-weight: bolder;
 		margin-bottom: 7px;
+
+		@media (min-width: $laptop) {
+			@include relSize('font-size', 36);
+		}
 	}
 
 	&__subTitle {
 		color: $color--vivid--light;
 		font-size: 11px;
 		margin-bottom: 7px;
-		margin-top: 7px;
+        margin-top: 7px;
+        
+        @media (min-width: $laptop) {
+			@include relSize('font-size', 24);
+		}
 	}
 
 	&__phone,
@@ -46,12 +90,21 @@
 		display: block;
 		font-size: 8px;
 		line-height: 2em;
-		text-decoration: none;
+        text-decoration: none;
+        
+        @media (min-width: $laptop) {
+			@include relSize('font-size', 16);
+		}
 	}
 
 	&__phoneIcon {
 		width: 7px;
-		height: 7px;
+        height: 7px;
+        
+        @media (min-width: $laptop) {
+           width: 15px;
+           height: 15px;
+        }
 	}
 
 	&__employeeCont {
@@ -64,7 +117,39 @@
 	&__employeePhone {
 		margin-left: 4px;
 		font-size: 6px;
-		text-decoration: none;
+        text-decoration: none;
+        
+        @media (min-width: $laptop) {
+			@include relSize('font-size', 16);
+		}
+	}
+
+	&__header {
+		text-transform: uppercase;
+        grid-column-start: 2;
+        
+        @media (min-width: $laptop) {
+           align-self: end;
+           @include relSize('padding-left', 51);
+        }
+	}
+
+	&__subHeader {
+		font-size: 13px;
+        font-weight: bold;
+        
+        @media (min-width: $laptop) {
+			@include relSize('font-size', 51);
+		}
+	}
+
+	&__mainHeader {
+		color: $color--vivid--light;
+        font-size: 40px;
+        
+        @media (min-width: $laptop) {
+			@include relSize('font-size', 151);
+		}
 	}
 }
 
@@ -73,12 +158,27 @@
 		fill: $color--dark;
 		stroke: #fff;
 		stroke-width: 1.5px;
+
+		@media (min-width: $laptop) {
+			stroke-width: 0.5px;
+		}
 	}
 
 	&__dot {
+        position: relative;
 		cursor: pointer;
 		stroke: #8d3cd0;
 		stroke-width: 2px;
-		transition: r 0.33s cubic-bezier(0.29, -0.24, 0.42, 2.28);
+        transition: r 0.33s cubic-bezier(0.29, -0.24, 0.42, 2.28);
+        z-index: 100;
+	}
+
+	&__line {
+		width: 1px;
+		height: 100px;
+		stroke: #fff;
+		stroke-width: 1;
+		stroke-dasharray: 1, 5;
+		stroke-linecap: round;
 	}
 }

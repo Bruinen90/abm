@@ -103,6 +103,40 @@ const SHOPS_DATA = {
 	},
 };
 
+let activeDotId = 'krakow';
+
+const shopsLine = () => {
+	const arrow = document.querySelector('.ourShops__arrow');
+	const line = document.querySelector('.ourShops__mapLine');
+	const adjustLine = (from, to, line) => {
+		// Calculate starting point
+		const fromPos = from.getBoundingClientRect();
+		const fromTop = fromPos.y + fromPos.height / 2 + window.scrollY;
+		const fromLeft = fromPos.x + fromPos.width / 2;
+		line.style.top = fromTop + 'px';
+		line.style.left = fromLeft + 'px';
+
+		// Calculate ending point
+		const toPos = to.getBoundingClientRect();
+		const toTop = toPos.y + toPos.height / 2 + window.scrollY;
+		// Just to starting-left point of arrow
+		const toLeft = toPos.x;
+
+		// Calculate length of line
+		const triangleBase = Math.abs(fromLeft - toLeft);
+		const triangleHeight = Math.abs(fromTop - toTop);
+		const lineLenght = Math.sqrt(
+			triangleBase * triangleBase + triangleHeight * triangleHeight
+		);
+		line.style.width = lineLenght + 'px';
+
+		// Calculate rotation angle
+		const angle = (180 / Math.PI) * Math.acos(triangleBase / lineLenght);
+		line.style.transform = `rotate(${-angle}deg)`;
+	};
+	adjustLine(document.getElementById(activeDotId), arrow, line);
+};
+
 const shopsMap = () => {
 	const map = document.querySelector('.ourShops__map');
 	if (!map) {
@@ -110,7 +144,6 @@ const shopsMap = () => {
 	}
 	const allDots = map.querySelectorAll('.map__dot');
 	const addressBox = document.querySelector('.ourShops__addressBox');
-	let activeDotId = 'krakow';
 	const styleDots = () =>
 		allDots.forEach(d => {
 			d.setAttribute('r', d.id === activeDotId ? '10' : '4');
@@ -123,6 +156,11 @@ const shopsMap = () => {
 	const setBoxContent = () => {
 		const data = SHOPS_DATA[activeDotId];
 		addressBox.innerHTML = `
+            <img
+                src="./img/map/map_arrow.svg"
+                alt=""
+                class="ourShops__arrow"
+            />
             <h3 class="ourShops__addressTitle">${data.title}</h3>
             <div class="ourShops__subTitle">${data.street}</div>
             <a href="tel: ${data.phone}" class="ourShops__phone"
@@ -150,14 +188,16 @@ const shopsMap = () => {
 
 	styleDots();
 	setBoxContent();
+	shopsLine();
 
 	allDots.forEach(dot => {
 		dot.addEventListener('click', () => {
 			activeDotId = dot.id;
 			styleDots();
 			setBoxContent();
+			shopsLine();
 		});
 	});
 };
 
-shopsMap();
+window.onload = shopsMap;

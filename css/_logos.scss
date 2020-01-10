@@ -9,7 +9,8 @@
 	@media (min-width: $laptop) {
 		@include relSize('padding-left', 90);
 		@include relSize('padding-right', 90);
-		@include relSize('padding-top', 80);
+        @include relSize('padding-top', 80);
+        @include relSize('padding-bottom', 80);
 	}
 }
 
@@ -29,6 +30,13 @@
 	width: calc(100vw - 80px);
     margin: 0 40px;
     flex-shrink: 0;
+
+    @media (min-width: $laptop) {
+       width: auto;
+       flex: 1;
+       justify-content: space-around;
+       margin: 0;
+    }
 }
 
 .logos__logo {
@@ -38,7 +46,7 @@
 
 	@media (min-width: $laptop) {
 		width: auto;
-		max-width: calc((100vw / 8) - 22.5px);
+		max-width: calc((100vw / 8) - 60px);
 		@include relSize('max-height', 100);
 	}
 }
