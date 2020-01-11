@@ -1628,7 +1628,7 @@ h1 {
 .yearsOnMarket__wagon {
   position: absolute;
   left: 0;
-  top: -20px;
+  top: -10px;
   height: 211px;
   z-index: 5;
   transition: all 0.1s;
@@ -1636,13 +1636,13 @@ h1 {
 @media (min-width: 768px) {
   .yearsOnMarket__wagon {
     height: 400px;
-    top: -102px;
+    top: -82px;
   }
 }
 @media (min-width: 1440px) {
   .yearsOnMarket__wagon {
     height: 792px;
-    top: -230px;
+    top: -190px;
   }
 }
 
@@ -2054,7 +2054,7 @@ h1 {
   transform: translateY(-50%);
   height: 1px;
   background-image: url("../img/dots_horizontal.svg");
-  z-index: -1;
+  z-index: 1;
 }
 @media (min-width: 960px) {
   .socials__title::before {
@@ -2073,7 +2073,7 @@ h1 {
     transform-origin: left;
     height: 1px;
     background-image: url("../img/dots_horizontal.svg");
-    z-index: -1;
+    z-index: 1;
     font-size: 24px;
   }
 }
@@ -2730,10 +2730,15 @@ h1 {
   mix-blend-mode: darken;
   stroke-width: 0;
   pointer-events: none;
-  z-index: 100;
+  z-index: 10;
 }
 .ourShops__map--vivid .map__contour {
   fill: #8d3cd0;
+}
+@media (min-width: 768px) {
+  .ourShops__map--vivid {
+    margin-top: -13vw;
+  }
 }
 @media (min-width: 960px) {
   .ourShops__map--vivid {

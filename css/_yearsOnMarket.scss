@@ -18,19 +18,19 @@
 .yearsOnMarket__wagon {
 	position: absolute;
 	left: 0;
-	top: -20px;
+	top: -10px;
 	height: 211px;
 	z-index: 5;
 	transition: all 0.1s;
 
 	@media (min-width: $tablet) {
 		height: 400px;
-		top: -102px;
+		top: -82px;
 	}
 
 	@media (min-width: $desktop) {
 		height: 792px;
-		top: -230px;
+		top: -190px;
 	}
 }
 

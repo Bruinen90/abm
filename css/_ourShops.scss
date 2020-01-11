@@ -47,10 +47,14 @@
 			mix-blend-mode: darken;
 			stroke-width: 0;
             pointer-events: none;
-            z-index: 100;
+            z-index: 10;
 
             .map__contour {
                 fill: $color--vivid--light;
+            }
+
+            @media (min-width: $tablet) {
+                margin-top: -13vw;
             }
 
             @media (min-width: $laptop) {
