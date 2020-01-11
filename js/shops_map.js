@@ -156,11 +156,9 @@ const shopsMap = () => {
 	const setBoxContent = () => {
 		const data = SHOPS_DATA[activeDotId];
 		addressBox.innerHTML = `
-            <img
-                src="./img/map/map_arrow.svg"
-                alt=""
-                class="ourShops__arrow"
-            />
+            <div class="ourShops__arrow">
+                <div class="arrow arrow--right"><div class="arrow__pointer"></div></div>
+            </div>
             <h3 class="ourShops__addressTitle">${data.title}</h3>
             <div class="ourShops__subTitle">${data.street}</div>
             <a href="tel: ${data.phone}" class="ourShops__phone"
@@ -199,5 +197,4 @@ const shopsMap = () => {
 		});
 	});
 };
-
 window.onload = shopsMap;

@@ -2497,6 +2497,50 @@ h1 {
   }
 }
 
+.arrow--right {
+  width: 100%;
+  height: 100%;
+}
+.arrow--right::before {
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 30%;
+  background-image: url("../img/dots_horizontal.svg");
+  background-repeat: repeat-x;
+}
+@media (min-width: 960px) {
+  .arrow--right::before {
+    width: 50%;
+  }
+}
+.arrow--right::after {
+  content: "";
+  position: absolute;
+  left: 31%;
+  top: 50%;
+  right: 0;
+  height: 1px;
+  width: 69%;
+  background: #fff;
+}
+@media (min-width: 960px) {
+  .arrow--right::after {
+    left: 51%;
+    width: 49%;
+  }
+}
+.arrow--right .arrow__pointer {
+  top: 1px;
+  left: auto;
+  right: 0;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-135deg);
+  width: 6px;
+  height: 6px;
+}
+
 .hugeABM {
   display: none;
 }
@@ -2653,9 +2697,9 @@ h1 {
 .ourShops__mapLine {
   height: 1px;
   width: 200px;
-  background: url(../img/dots_horizontal_vivid.svg);
+  background: url(../img/dots_horizontal.svg);
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   transform-origin: left;
 }
 @media (min-width: 960px) {
@@ -2668,12 +2712,33 @@ h1 {
   margin-top: -20%;
   margin-left: -30vw;
   width: 80vw;
-  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 960px) {
   .ourShops__map {
     width: 60vw;
     margin-top: -17%;
+    margin-left: -8vw;
+  }
+}
+.ourShops__map--vivid {
+  position: absolute;
+  margin-top: -11%;
+  margin-left: -30vw;
+  width: 80vw;
+  mix-blend-mode: darken;
+  stroke-width: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+.ourShops__map--vivid .map__contour {
+  fill: #8d3cd0;
+}
+@media (min-width: 960px) {
+  .ourShops__map--vivid {
+    width: 60vw;
+    margin-top: -8.9%;
     margin-left: -8vw;
   }
 }
@@ -2692,13 +2757,14 @@ h1 {
   position: absolute;
   left: 0;
   top: 40px;
-  width: 24px;
+  width: 35px;
+  height: 7px;
 }
 @media (min-width: 960px) {
   .ourShops__arrow {
-    width: 7.1354166667vw;
+    width: 14.2708333333vw;
     top: 10.5729166667vw;
-    left: 13.6979166667vw;
+    left: 3.90625vw;
   }
 }
 .ourShops__addressTitle {
@@ -2801,7 +2867,7 @@ h1 {
 .map__dot {
   position: relative;
   cursor: pointer;
-  stroke: #8d3cd0;
+  stroke: #fff;
   stroke-width: 2px;
   transition: r 0.33s cubic-bezier(0.29, -0.24, 0.42, 2.28);
   z-index: 100;
