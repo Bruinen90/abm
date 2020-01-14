@@ -309,7 +309,8 @@
 						<img
 							src="./img//arrow_up.svg"
 							alt=""
-							class="realizations__arrowIcon"
+                            class="realizations__arrowIcon"
+                            id="realizationsArrow"
 						/>
 						<ol class="realizations__list">
 							<li data-id="empik">Empik Rynek Kraków</li>
@@ -325,6 +326,7 @@
 
 			<!-- NASZA MISJA -->
 			<section class="mission">
+                <div class="missions__dotsEndPoint" id="missionLineEndPoint"></div>
 				<h2 class="mission__header">Nasza misja</h2>
 				<div class="mission__text">
 					<h3 class="mission__title">
@@ -780,28 +782,7 @@
 					</svg>
 				</div>
 				<div class="ourShops__addressBox">
-					<!-- Generated in shops_map -->
-					<!-- <h3 class="ourShops__addressTitle">Kraków</h3>
-					<div class="ourShops__subTitle">ul. Dobry Początek 6</div>
-					<a href="tel: +48 12 296 47 00" class="ourShops__phone"
-						>+48 12 296 47 00</a
-					>
-					<a href="mailto: info@abm.pl" class="ourShops__mail"
-						>info@abm.pl</a
-					>
-					<h3 class="ourShops__subTitle">Dział handlowy</h3>
-					<div class="ourShops__employeeCont">
-						<img
-							src="./img/icons/phone__icon.svg"
-							class="ourShops__phoneIcon"
-						/>
-						<span class="ourShops__employeeName">Piotr</span>
-						<a
-							href="tel: +48 12 296 47 00"
-							class="ourShops__employeePhone"
-							>+48 12 296 47 00</a
-						>
-					</div> -->
+					<!-- Generated in shops_map.js -->
 				</div>
 
 				<h2 class="ourShops__header">
@@ -975,6 +956,7 @@
 		</main>
 
 		<!-- Scripts -->
+        <script src="./js/linesCreator.js"></script>
 		<script src="./js/welcome.js"></script>
 		<script src="./js/menu.js"></script>
 		<script src="./js/productsCount.js"></script>
@@ -982,6 +964,7 @@
 		<script src="./js/slider_obj.js"></script>
 		<script src="./js/realizations.js"></script>
 		<script src="./js/popup.js"></script>
-		<script src="./js/shops_map.js"></script>
+        <script src="./js/shops_map.js"></script>
+		<script src="./js/onLoadEvents.js"></script>
 	</body>
 </html>

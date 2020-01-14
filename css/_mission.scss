@@ -1,12 +1,20 @@
 .mission {
+	position: relative;
 	background-image: url('../img/dots.svg');
 	background-repeat: repeat-y;
 	background-position-x: 80%;
 
 	@media (min-width: $tablet) {
-		background-position-x: 80%;
 		padding-bottom: 15vh;
 	}
+}
+
+.missions__dotsEndPoint {
+	position: absolute;
+	left: 80%;
+	top: 0;
+	width: 1px;
+	height: 1px;
 }
 
 .mission__header {
@@ -41,6 +49,10 @@
 		margin-left: 18.5vw;
 		width: auto;
 		max-width: 33vw;
+        @include relSize('min-height', 330);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 	}
 }
 
@@ -83,7 +95,8 @@
 		.arrow {
 			position: absolute;
 			right: 0;
-			top: 0;
+			bottom: 0;
+			@include relSize('height', 400);
 		}
 	}
 }

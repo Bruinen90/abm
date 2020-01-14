@@ -1008,15 +1008,23 @@ h1 {
 }
 
 .mission {
+  position: relative;
   background-image: url("../img/dots.svg");
   background-repeat: repeat-y;
   background-position-x: 80%;
 }
 @media (min-width: 768px) {
   .mission {
-    background-position-x: 80%;
     padding-bottom: 15vh;
   }
+}
+
+.missions__dotsEndPoint {
+  position: absolute;
+  left: 80%;
+  top: 0;
+  width: 1px;
+  height: 1px;
 }
 
 .mission__header {
@@ -1054,6 +1062,10 @@ h1 {
     margin-left: 18.5vw;
     width: auto;
     max-width: 33vw;
+    min-height: 17.1875vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
@@ -1101,7 +1113,8 @@ h1 {
   .mission__arrowCont .arrow {
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
+    height: 20.8333333333vw;
   }
 }
 
@@ -1943,6 +1956,7 @@ h1 {
 }
 @media (min-width: 960px) {
   .contact__icon {
+    width: 62px;
     max-height: 62px;
     max-width: 62px;
   }
