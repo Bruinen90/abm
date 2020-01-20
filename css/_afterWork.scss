@@ -1,11 +1,13 @@
 .afterWork {
-	padding: 30px  20px;
+	padding: 30px 20px;
 	overflow: hidden;
-    width: 100%;
+	width: 100%;
 	background-color: $color--dark;
 
 	@media (min-width: $laptop) {
-		padding: 50px 200px;
+		padding: 50px;
+		@include relSize('padding-left', 200);
+		@include relSize('padding-right', 200);
 		display: grid;
 		grid-template-columns: 67fr 76fr;
 		grid-column-gap: 90px;
@@ -47,8 +49,18 @@
 
 	@media (min-width: $tablet) {
 		font-size: 16px;
-		line-height: 19px;
+		line-height: 27px;
 	}
+
+	p {
+		margin-bottom: 35px;
+	}
+}
+
+.afterWork__textHeader {
+	color: $color--vivid--light;
+	font-size: 21px;
+	margin-bottom: 29px;
 }
 
 .afterWork__imgCont {
@@ -80,7 +92,7 @@
 	object-fit: cover;
 
 	@media (min-width: $tablet) {
-		height: 495px;
+		@include relSize('height', 495);
 	}
 }
 

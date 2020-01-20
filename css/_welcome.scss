@@ -22,7 +22,8 @@
 		text-transform: uppercase;
 		position: absolute;
 		top: 20%;
-		z-index: 5;
+        z-index: 5;
+        pointer-events: none;
 
 		@media (min-width: $laptop) {
 			@include relSize('margin-left', 200);
@@ -350,7 +351,8 @@
 			width: auto;
 			height: auto;
 			margin-bottom: 1vw;
-			margin-left: auto;
+            margin-left: auto;
+            margin-right: 12px;
 
 			a {
 				text-decoration: none;
@@ -397,18 +399,18 @@
 	&::after {
 		content: '';
 		position: absolute;
-		left: -5px;
-		top: -5px;
-		bottom: -5px;
-		right: -5px;
+		left: -8px;
+		top: -8px;
+		bottom: -8px;
+		right: -8px;
 		background-color: rgba(255, 255, 255, 0.25);
 		border-radius: 50%;
 		transition: all 0.33s cubic-bezier(0.48, -0.26, 0.69, 2.5);
 	}
 
 	@media (min-width: $laptop) {
-		@include relSize('width', 100);
-		@include relSize('height', 100);
+		@include relSize('width', 87);
+		@include relSize('height', 87);
 		&:hover {
 			&::after {
 				transform: scale(1.2);
@@ -421,7 +423,7 @@
 	width: 18px;
 
 	@media (min-width: $laptop) {
-		@include relSize('width', 28);
+		@include relSize('width', 25);
 	}
 }
 

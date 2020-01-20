@@ -69,7 +69,8 @@
 	}
 
 	@media (min-width: $tablet) {
-		@include relSize('font-size', 559);
+        @include relSize('font-size', 559);
+        text-align: right;
 	}
 }
 

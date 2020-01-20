@@ -24,9 +24,10 @@
 	}
 
 	@media (min-width: $laptop) {
-        height: 110px;
+        height: auto;
         @include relSize('padding-left', 57);
         @include relSize('padding-right', 78);
+        @include relSize('padding-top', 47);
 		background: transparent;
 	}
 

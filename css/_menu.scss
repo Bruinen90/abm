@@ -11,12 +11,12 @@
 	transform: translateX(100%);
 	opacity: 0;
 	pointer-events: none;
-    transition: all 0.5s ease-in-out;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	transition: all 0.5s ease-in-out;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	&--active {
 		transform: translateX(0);
@@ -37,7 +37,7 @@
 		width: 100%;
 		padding: 0 30px;
 		padding-left: 0;
-        background: transparent;
+		background: transparent;
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		transform: translateX(0);
@@ -131,7 +131,7 @@
 	@media (min-width: $laptop) {
 		display: block;
 		background: transparent;
-		font-size: 20px;
+		@include relSize('font-size', 18);
 		padding-bottom: 5px;
 		@include relSize('margin-right', 130);
 		@include relSize('width', 131);
@@ -139,12 +139,11 @@
 		&::after {
 			content: '+';
 			color: #fff;
-			right: -1em;
-			bottom: -0.66em;
+			bottom: -0.55em;
 			position: absolute;
 			transform: rotate(45deg);
 			font-size: 28px;
-			right: -1.66em;
+			right: -1em;
 			transition: all 0.2s linear;
 		}
 
@@ -155,8 +154,8 @@
 			content: '';
 			position: absolute;
 			left: 0px;
-			right: -1em;
-			bottom: -0.25em;
+			right: 0.5em;
+			bottom: 0;
 			height: 0.25em;
 			background: #fff;
 			z-index: -1;
@@ -167,10 +166,10 @@
 			&::before {
 				background: $color--vivid;
 				height: 1em;
-				bottom: 0.25em;
+				bottom: 0.5em;
 			}
 			&::after {
-				bottom: 0;
+				bottom: 0.07em;
 			}
 		}
 	}
@@ -184,23 +183,23 @@
 }
 
 .menu__socials {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin-top: 11.5vh;
+	display: flex;
+	justify-content: space-between;
+	width: 90%;
+	margin-top: 11.5vh;
 
-    @media (min-width: $laptop) {
-       display: none;
-    }
+	@media (min-width: $laptop) {
+		display: none;
+	}
 }
 
 .menu__socialLink {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .menu__socialIcon {
-    width: 30px;
-    height: 30px;
+	width: 30px;
+	height: 30px;
 }
 
 .menu__cover {

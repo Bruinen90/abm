@@ -1,0 +1,19 @@
+.aToZ {
+	min-height: 100vh;
+	background-color: $color--dark;
+	@include strokeText;
+
+	* {
+		color: inherit;
+	}
+}
+
+.aToZ__arrowCont {
+    height: 100%;
+}
+
+.aToZ__arrow {
+	.arrow {
+		height: 90%;
+	}
+}

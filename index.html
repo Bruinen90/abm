@@ -28,19 +28,27 @@
 			<div class="menu">
 				<ul class="menu__list">
 					<li class="menu__item">
-						<a href="" class="menu__link">O firmie</a>
+						<a class="menu__link" data-target=".mission"
+							>O firmie</a
+						>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Team ABM</a>
+						<a class="menu__link" data-target=".afterWork"
+							>Team ABM</a
+						>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Realizacje</a>
+						<a class="menu__link" data-target=".realizations"
+							>Realizacje</a
+						>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Aktualności</a>
+						<a class="menu__link" data-target=".events"
+							>Aktualności</a
+						>
 					</li>
 					<li class="menu__item">
-						<a href="" class="menu__link">Kontakt</a>
+						<a class="menu__link" data-target=".contact">Kontakt</a>
 					</li>
 				</ul>
 				<div class="menu__specials">
@@ -114,7 +122,8 @@
 						<source src="./img/demo_video.mp4" type="video/mp4" />
 					</video>
 					<div class="welcome__newsCont">
-						<div class="welcome__lines">
+						<!-- Removed, wait for customer to change his mind :-) -->
+						<!-- <div class="welcome__lines">
 							<span class="welcome__line"></span>
 							<span
 								class="welcome__line welcome__line--long"
@@ -134,7 +143,7 @@
 								ullamco laboris nisi ut aliquip ex ea commodo
 								consequat.
 							</div>
-						</div>
+						</div> -->
 					</div>
 					<div class="welcome__playCont">
 						<div class="welcome__playButton">
@@ -309,8 +318,8 @@
 						<img
 							src="./img//arrow_up.svg"
 							alt=""
-                            class="realizations__arrowIcon"
-                            id="realizationsArrow"
+							class="realizations__arrowIcon"
+							id="realizationsArrow"
 						/>
 						<ol class="realizations__list">
 							<li data-id="empik">Empik Rynek Kraków</li>
@@ -326,7 +335,10 @@
 
 			<!-- NASZA MISJA -->
 			<section class="mission">
-                <div class="missions__dotsEndPoint" id="missionLineEndPoint"></div>
+				<div
+					class="missions__dotsEndPoint"
+					id="missionLineEndPoint"
+				></div>
 				<h2 class="mission__header">Nasza misja</h2>
 				<div class="mission__text">
 					<h3 class="mission__title">
@@ -463,12 +475,12 @@
 				<div class="arrow arrow--down">
 					<div class="arrow__pointer"></div>
 				</div>
-				<div class="events__number">124</div>
+				<div class="events__number">54</div>
 				<div class="events__numberDescription">
 					udziałów w targach w Polsce i na Świecie
 				</div>
 				<div class="events__content">
-					<h2 class="events__header">Wydarzenia</h2>
+					<h2 class="events__header">Aktualności</h2>
 					<ul class="events__list">
 						<img
 							src="./img//icons/x.svg"
@@ -601,20 +613,58 @@
 				</div>
 			</section>
 
+			<section class="aToZ">
+				<div class="aToZ__wordsCont">
+					<div class="aToZ__word">projekt</div>
+					<div class="aToZ__word">produkcja</div>
+					<div class="aToZ__word">montaż</div>
+				</div>
+				<div class="aToZ__arrowCont">
+					<div class="aToZ__arrow">
+						<div class="arrow arrow--down">
+							<div class="arrow__pointer"></div>
+						</div>
+					</div>
+					<div class="aToZ__letterCont">
+						<div class="aToZ__subLetter"></div>
+						<div class="aToZ__letter"></div>
+					</div>
+					<div class="aToZ__letterCont">
+						<div class="aToZ__subLetter"></div>
+						<div class="aToZ__letter"></div>
+					</div>
+				</div>
+			</section>
+
 			<!-- Praca to nie wszystko -->
 			<section class="afterWork">
 				<h2 class="afterWork__header">Praca to nie wszystko</h2>
 				<h4 class="afterWork__title">Team ABM</h4>
-				<p class="afterWork__text">
-					"Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enimad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-					occaecat cupidatat non proident, sunt in culpa qui officia
-					deserunt mollit anim id est laborum."
-				</p>
+				<div class="afterWork__text">
+					<h5 class="afterWork__textHeader">
+						Sportowa inicjatywa pracowników ABM
+					</h5>
+					<p>
+						"Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis
+						nostrud exercitation ullamco laboris nisi ut aliquip ex
+						ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu
+						fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+						non proident, sunt in culpa qui officia deserunt mollit
+						anim id est laborum."
+					</p>
+					<p>
+						"Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit, sed do eiusmod tempor incididunt ut labore et
+						dolore magna aliqua. Ut enim ad minim veniam, quis
+						nostrud exercitation ullamco laboris nisi ut aliquip ex
+						ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu
+						fugiat nulla pariatur…"
+					</p>
+				</div>
 				<picture class="afterWork__imgCont">
 					<img
 						src="./img/photos/afterWork.jpg"
@@ -679,7 +729,6 @@
 			</section>
 
 			<!-- Nasze salony -->
-			<div class="ourShops__mapLine"></div>
 			<section class="ourShops">
 				<div class="ourShops__mapCont">
 					<svg
@@ -956,7 +1005,7 @@
 		</main>
 
 		<!-- Scripts -->
-        <script src="./js/linesCreator.js"></script>
+		<script src="./js/linesCreator.js"></script>
 		<script src="./js/welcome.js"></script>
 		<script src="./js/menu.js"></script>
 		<script src="./js/productsCount.js"></script>
@@ -964,7 +1013,8 @@
 		<script src="./js/slider_obj.js"></script>
 		<script src="./js/realizations.js"></script>
 		<script src="./js/popup.js"></script>
-        <script src="./js/shops_map.js"></script>
+		<script src="./js/shops_map.js"></script>
 		<script src="./js/onLoadEvents.js"></script>
+		<script src="./js/linksHandler.js"></script>
 	</body>
 </html>
