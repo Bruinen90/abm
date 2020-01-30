@@ -119,7 +119,7 @@
 .menu__specialLink {
 	width: 137px;
 	text-decoration: none;
-	height: 37px;
+	@include relSize('height', 37);
 	position: relative;
 	font-size: 19px;
 	font-weight: 900;
